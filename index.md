@@ -1,29 +1,32 @@
-## Portfolio
+## Data Science Portfolio
 
 ---
 
-### Category Name 1 
+### Personal Work
 
-[Project 1 Title](/sample_page)
+[Multivariate Forecasting with LSTM](/sample_page)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
-[Project 2 Title](/pdf/sample_presentation.pdf)
+[Sklearn Custom Pipelines with Optuna Tuning](/pdf/sample_presentation.pdf)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
-[Project 3 Title](http://example.com/)
+[Class-based Outlier Detection](http://example.com/)
+<img src="images/dummy_thumbnail.jpg?raw=true"/>
+
+---
+[NLP Sentiment Analysis of Amazon Reviews](http://example.com/)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
 
-### Category Name 2
+### Industry Projects (Confidential)
 
-- [Project 1 Title](http://example.com/)
-- [Project 2 Title](http://example.com/)
-- [Project 3 Title](http://example.com/)
-- [Project 4 Title](http://example.com/)
-- [Project 5 Title](http://example.com/)
+- FMCG: Product Sales Forecasting and Portfolio Recommendations
+- Logistics: Demand Forecasting and Price Optimization
+- Telecom: Identifying Critical Applications
+- IT Ops: Change Impact Classification
 
 ---
 
