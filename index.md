@@ -21,7 +21,7 @@
 
 ---
 
-### Industry Projects (Confidential)
+### Industry Projects (Private)
 
 - FMCG: Product Sales Forecasting and Portfolio Recommendations
 - Logistics: Demand Forecasting and Price Optimization
