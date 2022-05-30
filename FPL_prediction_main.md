@@ -1,5 +1,5 @@
 # Player Performance Prediction - English Premier League Football
-\
+
 ### A. Overview
 \
 **Use Case:** Predict the total points accumulated by each player in the next 5 gameweeks.\
