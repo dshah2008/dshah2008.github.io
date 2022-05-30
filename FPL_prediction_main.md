@@ -1,7 +1,7 @@
 # Player Performance Prediction - English Premier League Football
-&nbsp;
+\  
 **Use Case:** Predict the total points accumulated by each player in the next 5 gameweeks.
-&nbsp;
+\  
 **Background:** I have an immense passion for football(soccer) and I'm interested in improving my understanding of the game with the help of Machine Learning. Over the past few years, football teams globally have spent millions to track and analyze games and develop strategies using AI. With this project, I am looking to develop sota
 
 
