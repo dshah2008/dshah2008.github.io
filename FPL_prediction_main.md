@@ -2,6 +2,9 @@
 
 **Use Case:** Predict the total points accumulated by each player in the next 5 gameweeks.
 
+**Background:** Predict the total points accumulated by each player in the next 5 gameweeks.
+
+
 ### 1. Suggest hypotheses about the causes of observed phenomena
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
