@@ -4,8 +4,8 @@
 
 ### Personal Projects
 
-[Multivariate Forecasting with LSTM](/sample_page)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+[Football Player Performance Prediction with LSTM](/sample_page)
+<img src="images/EPL_photo.JPG?raw=true"/>
 
 ---
 [Sklearn Custom Pipelines with Optuna Tuning](/pdf/sample_presentation.pdf)
