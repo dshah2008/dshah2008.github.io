@@ -4,7 +4,7 @@
 
 ### Personal Projects
 
-[Football Player Performance Prediction with LSTM](/FPL_prediction_main.md)
+[Football Player Performance Prediction with LSTM (click here for details)](/FPL_prediction_main.md)
 
 <img src="images/EPL_photo1.JPG?raw=true"/>
 
