@@ -3,10 +3,10 @@ description: > # your text below (remove <br> elements if you don't need line br
   <br>
   I'm a Data Scientist with a passion for solving business problems using AI. I have 3 years of experience developing 
   Machine Learning, Deep Learning and Forecasting solutions across industries.
-  <br>
+  <br><br>
   I'm currently a student at Queen's University - Canada, pursuing a Master's degree in Artificial Intelligence. 
   I'm located in Toronto. Feel free to reach out to me on LinkedIn.
-  <br>
+  <br><br>
   <a href="https://www.linkedin.com/in/dhrumelshah/">View My LinkedIn Profile</a> 
   
 theme: jekyll-theme-dinky
