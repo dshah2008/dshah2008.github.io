@@ -27,6 +27,7 @@ Two Python notebooks were used to code the solution:
 1) *Data Prep and EDA.ipynb* : Aggregates and Cleans data to generate *master_data.csv*. Also contains EDA graphs.
 2) *LSTM Player Forecast.ipynb* : Data Modeling and Evaluation\
 \
+\
 **Data**\
 \
 Data has been aggregated from the following source tables (total of 241 files):
@@ -36,6 +37,7 @@ Data has been aggregated from the following source tables (total of 241 files):
 - players_raw.csv : Contains player position information for each season = 6 files.
 \
 \
+*'noautoindent'* *'noai'*
 **Data Preparation**\
 \
 The following steps were taken to prepare the data:
