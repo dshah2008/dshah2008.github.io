@@ -20,29 +20,41 @@ Several solutions do exist, predicting player performance using similar data sou
 <br/><br/>
 
 ### B. Solution
-
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-
-```javascript
-if (isAwesome){
-  return true
-}
-```
-
-### 2. Assess assumptions on which statistical inference will be based
-
-```javascript
-if (isAwesome){
-  return true
-}
-```
+\
+**Design**\
+\
+Two Python notebooks were used to code the solution:
+1) *Data Prep and EDA.ipynb* : Aggregates and Cleans data to generate *master_data.csv*. Also contains EDA graphs.
+2) *LSTM Player Forecast.ipynb* : Data Modeling and Evaluation
+\
+\
+**Data**\
+\
+Data has been aggregated from the following source tables (total of 241 files):
+- gw(n).csv : Player performance data for each gameweek. Total of 38 gameweeks x 6 seasons = 228 files.
+- fixtures.csv : List of all fixtures for the season = 6 files. It contains team IDs and kickoff times.
+- master_team_list.csv : Team ID and name mapping for each season in 1 file.
+- players_raw.csv : Contains player position information for each season = 6 files.
+\
+\
+**Data Preparation**\
+\
+The following steps were taken to prepare the data:
+- Aggregate gameweek data
+- Clean player name
+- Filter out blank fixtures
+- Create fixture list from raw data for 16-17 and 17-18 seasons (not present in fixture file)
+- Map team ID to team names
+- Create *team_goals_scored* and *team_goals_conceded* features
+- Get missing position from player data
+- Filter out player-club occurences that total 0 minutes
+- Create *player_kickoff_id*
+- Encode team and opponent categories based on total goals scored and conceded in the previous season
+- Encode position with average points per minute
+\
+\
 
 ### 3. Support the selection of appropriate statistical tools and techniques
 
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
-### 4. Provide a basis for further data collection through surveys or experiments
-
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
