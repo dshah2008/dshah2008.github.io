@@ -16,7 +16,7 @@ Over the past few years, football teams globally have spent millions to analyze 
 **Challenges** \
 The major challenge in this project is being able to capture the volatility of the points scored by a player. If you observe the time series for a single player below, there does not appear to be any clear trend or seasonal pattern. The data for each player is also limited (~100 samples per player) and the volatlity is far greater than even cryptocurrencies. This is why even the biggest clubs and football experts struggle to predict player performance. The problem gets even more challenging when you try to forecast multiple timesteps.\
 \
-<img src="images/dummy_thumbnail.jpg?raw=true"/>\
+<img src="images/Points Trend - Bernardo Silva1.JPG?raw=true"/>\
 \
 **Other works** \
 Several solutions do exist, predicting player performance using similar data sources. However, most of these approaches use bagging or boosting-based regression models. They do not leverage time series information which is critical for capturing patterns in player form and they do not predict more than one timestep into the future. They also do not use Deep Learning despite the high variance and complexity in the data.
