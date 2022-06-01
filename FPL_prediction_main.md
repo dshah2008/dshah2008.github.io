@@ -1,4 +1,4 @@
-# Football Player Performance Prediction
+# Player Performance Prediction in Football(Soccer)
 <br/><br/>
 ### A. Overview 
 \
@@ -6,7 +6,7 @@
 Predict the points accumulated by each player in the next 5 gameweeks of the English Premier League. These points are tabulated by the *Fantasy Premier League* game and are one of the most recognized indicators of game-wise player performance.\
 \
 **Objective** \
-I have an immense passion for football(soccer) and I'm eager to improve my understanding of the game with the help of Machine Learning. I'm looking to develop my skillset in Deep Learning and Forecasting, and eventually contribute towards the increasing use of AI in the multi-billion dollar football industry.\
+I have an immense passion for football and I'm eager to improve my understanding of the game with the help of Machine Learning. I'm looking to develop my skillset in Deep Learning and Forecasting, and eventually contribute towards the increasing use of AI in the multi-billion dollar football industry.\
 \
 With this project, over multiple cycles, I plan to develop state-of-the-art models that can accurately forecast player performance multiple timesteps into the future. In this first version, I have simplified the problem to predict the average of the points scored in the next five games. The model used is a deep neural network that combines several LSTM and fully-connected layers.\
 \
