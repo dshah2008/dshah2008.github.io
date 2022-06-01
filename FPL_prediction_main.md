@@ -24,9 +24,9 @@ Several solutions do exist, predicting player performance using similar data sou
 **Design**\
 \
 Two Python notebooks were used to code the solution:
-1\) *Data Prep and EDA.ipynb* : Aggregates and Cleans data to generate *master_data.csv*. Also contains EDA graphs.
-2\) *LSTM Player Forecast.ipynb* : Data Modeling and Evaluation\
-\
+1) *Data Prep and EDA.ipynb* : Aggregates and Cleans data to generate *master_data.csv*. Also contains EDA graphs.
+2) *LSTM Player Forecast.ipynb* : Data Modeling and Evaluation
+<br />
 \
 **Data**\
 \
