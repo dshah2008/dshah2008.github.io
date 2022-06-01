@@ -27,7 +27,6 @@ Two Python notebooks were used to code the solution:\
 \- *Data Prep and EDA.ipynb* : Aggregates and Cleans data to generate *master_data.csv*. Also contains EDA graphs.\
 \- *LSTM Player Forecast.ipynb* : Data Modeling and Evaluation\
 \
-\
 **Data**\
 \
 Data has been aggregated from the following source tables (total of 241 files):\
@@ -36,24 +35,23 @@ Data has been aggregated from the following source tables (total of 241 files):\
 \- master_team_list.csv : Team ID and name mapping for each season in 1 file.\
 \- players_raw.csv : Contains player position information for each season = 6 files.\
 \
-\
+<br/><br/>
 ### C. Implementation
 \
 **Data Preparation**\
 \
-The following steps were taken to prepare the data:
-- Aggregate gameweek data
-- Clean player name
-- Filter out blank fixtures
-- Create fixture list from raw data for 16-17 and 17-18 seasons (not present in fixture file)
-- Map team ID to team names
-- Create *team_goals_scored* and *team_goals_conceded* features
-- Get missing position from player data
-- Filter out player-club occurences that total 0 minutes
-- Create *player_kickoff_id*
-- Encode team and opponent categories based on total goals scored and conceded in the previous season
-- Encode position with average points per minute
-\
+The following steps were taken to prepare the data:\
+\- Aggregate gameweek data\
+\- Clean player name\
+\- Filter out blank fixtures\
+\- Create fixture list from raw data for 16-17 and 17-18 seasons (not present in fixture file)\
+\- Map team ID to team names\
+\- Create *team_goals_scored* and *team_goals_conceded* features\
+\- Get missing position from player data\
+\- Filter out player-club occurences that total 0 minutes\
+\- Create *player_kickoff_id*\
+\- Encode team and opponent categories based on total goals scored and conceded in the previous season\
+\- Encode position with average points per minute\
 \
 
 ### 3. Support the selection of appropriate statistical tools and techniques
