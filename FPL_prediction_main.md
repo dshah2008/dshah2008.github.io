@@ -3,12 +3,12 @@
 ### A. Overview 
 \
 **Use Case**\
-Predict the points accumulated by each player in the next 5 gameweeks.\
+Predict the points accumulated by each player in the next 5 gameweeks\
 \
 **Objective** \
 I have an immense passion for football(soccer) and I'm eager to improve my understanding of the game with the help of Machine Learning. I'm looking to develop my skillset in Deep Learning and Forecasting, and eventually contribute towards the increasing use of AI in the multi-billion dollar football industry.\
 \
-With this project, over multiple cycles, I plan to develop state-of-the-art models that can accurately forecast player performance multiple timesteps into the future. In this first version, I have developed a model that predicts the average points scored in the next five games for every player. The model is a deep neural network that combines several LSTM and fully-connected layers.\
+With this project, over multiple cycles, I plan to develop state-of-the-art models that can accurately forecast player performance multiple timesteps into the future. In this first version, I have simplified the problem to predict the average of the points scored in the next five games. The model used is a deep neural network that combines several LSTM and fully-connected layers.\
 \
 **Background & Data Source** \
 Over the past few years, football teams globally have spent millions to analyze games and develop strategies using AI. Companies such as Opta help these football clubs collect and aggregate match data. Their data is publicly available via the Fantasy Premier League game on https://fantasy.premierleague.com/. Several developers have maintained GitHub repositories that scrape weekly match data weekly from the game's website. For this project, I have used the https://github.com/vaastav/Fantasy-Premier-League repository as my data source. It contains several data tables including player performance data for every match played in the last 6 years, as well as data describing players, teams and fixtures.\
