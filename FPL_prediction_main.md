@@ -13,9 +13,11 @@ With this project, over multiple cycles, I plan to develop state-of-the-art mode
 **Background & Data Source** \
 Over the past few years, football teams globally have spent millions to analyze games and develop strategies using AI. Companies such as Opta help these football clubs collect and aggregate match data. Their data is publicly available via the Fantasy Premier League game on https://fantasy.premierleague.com/. Several developers have maintained GitHub repositories that scrape weekly match data weekly from the game's website. For this project, I have used the https://github.com/vaastav/Fantasy-Premier-League repository as my data source. It contains several data tables including player performance data for every match played in the last 6 years, as well as data describing players, teams and fixtures.\
 \
-**Challenge** \
-The major challenge in this project is being able to capture the volatility of the points scored by a player. If you observe the time series for a single player below, there does not appear to be any clear trend or seasonal pattern. The data for each player is also limited (~100 samples per player) and the volatlity is far greater than even cryptocurrencies. This is why even the biggest clubs and football experts struggle to predict player performance. The problem gets even more challenging when you try to forecast multiple timesteps.\
-\
+**Challenges** \
+\- Limited data for each player (approx. average of 100 samples per player)\
+\- Too many time series (over 500 players = 500 unique time series)\
+\- Need to forecast multiple timesteps\
+\- High volatility of points scored by a player with no clear trend or seasonal patterns (as shown in the figure below)\
 <img src="images/Points Trend - Bernardo Silva1.JPG?raw=true"/>\
 \
 **Other works** \
