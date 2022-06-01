@@ -3,7 +3,7 @@
 ### A. Overview 
 \
 **Use Case**\
-Predict the total points accumulated by each player in the next 5 gameweeks.\
+Predict the points accumulated by each player in the next 5 gameweeks.\
 \
 **Objective** \
 I have an immense passion for football(soccer) and I'm eager to improve my understanding of the game with the help of Machine Learning. I'm looking to develop my skillset in Deep Learning and Forecasting, and eventually contribute towards the increasing use of AI in the multi-billion dollar football industry.\
@@ -38,14 +38,16 @@ Data has been aggregated from the following source tables (total of 241 files):\
 \- gw(n).csv : Player performance data for each gameweek. Total of 38 gameweeks x 6 seasons = 228 files.\
 \- fixtures.csv : List of all fixtures for the season = 6 files. It contains team IDs and kickoff times.\
 \- master_team_list.csv : Team ID and name mapping for each season in 1 file.\
-\- players_raw.csv : Contains player position information for each season = 6 files.
+\- players_raw.csv : Contains player position information for each season = 6 files.\
+\
+The target variable *bps* indicating total points is present in *gw(n).csv*
 <br/><br/>
 
 ### C. Implementation
 \
 **Data Preparation**\
 \
-The following steps were taken to prepare the data:\
+The following steps were taken to prepare *master_data.csv*:\
 \- Aggregate gameweek data\
 \- Clean player name\
 \- Filter out blank fixtures\
@@ -58,6 +60,17 @@ The following steps were taken to prepare the data:\
 \- Encode team and opponent categories based on total goals scored and conceded in the previous season\
 \- Encode position with average points per minute\
 \
+Further steps to prepare data for modeling:\
+\- Adjust column types and sort rows by kickoff_time\
+\- Filter data for *bps* between 0 and 50, done only in this version to limit the scope of the project\
+\- Filter for players who have played a total of at least 38 games across all seasons
+\- Normalize data\
+\- For Random Forest: For features whose values are unknown for the future gameweek, shift values in data frame by 1 period\
+\- For LSTM: Create 3d input and output (n_samples x n_timesteps x n_features)\
+\
+**Modeling**\
+\
+
 
 ### 3. Support the selection of appropriate statistical tools and techniques
 
