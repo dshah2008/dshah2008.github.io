@@ -19,7 +19,7 @@ For this project, I have used the https://github.com/vaastav/Fantasy-Premier-Lea
 Several solutions do exist, predicting player performance using similar data sources. However, most of these approaches use bagging or boosting-based regression models. They do not leverage time series information which is critical for capturing patterns in player form and they do not predict more than one timestep into the future. They also do not use Deep Learning despite the high variance and complexity in the data.
 <br/><br/>
 
-### B. Solution
+### B. Data and Design
 \
 **Design**\
 \
@@ -27,14 +27,17 @@ Two Python notebooks were used to code the solution:\
 \- *Data Prep and EDA.ipynb* : Aggregates and Cleans data to generate *master_data.csv*. Also contains EDA graphs.\
 \- *LSTM Player Forecast.ipynb* : Data Modeling and Evaluation\
 \
+\
 **Data**\
 \
-Data has been aggregated from the following source tables (total of 241 files):
-- gw(n).csv : Player performance data for each gameweek. Total of 38 gameweeks x 6 seasons = 228 files.
-- fixtures.csv : List of all fixtures for the season = 6 files. It contains team IDs and kickoff times.
-- master_team_list.csv : Team ID and name mapping for each season in 1 file.
-- players_raw.csv : Contains player position information for each season = 6 files.
+Data has been aggregated from the following source tables (total of 241 files):\
+\- gw(n).csv : Player performance data for each gameweek. Total of 38 gameweeks x 6 seasons = 228 files.\
+\- fixtures.csv : List of all fixtures for the season = 6 files. It contains team IDs and kickoff times.\
+\- master_team_list.csv : Team ID and name mapping for each season in 1 file.\
+\- players_raw.csv : Contains player position information for each season = 6 files.\
 \
+\
+### C. Implementation
 \
 **Data Preparation**\
 \
