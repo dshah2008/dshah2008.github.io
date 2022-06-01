@@ -23,10 +23,10 @@ Several solutions do exist, predicting player performance using similar data sou
 \
 **Design**\
 \
-Two Python notebooks were used to code the solution:
-<- *Data Prep and EDA.ipynb* : Aggregates and Cleans data to generate *master_data.csv*. Also contains EDA graphs.
-<- *LSTM Player Forecast.ipynb* : Data Modeling and Evaluation
-<br/><br/>
+Two Python notebooks were used to code the solution:\
+\- *Data Prep and EDA.ipynb* : Aggregates and Cleans data to generate *master_data.csv*. Also contains EDA graphs.\
+\- *LSTM Player Forecast.ipynb* : Data Modeling and Evaluation\
+\
 **Data**\
 \
 Data has been aggregated from the following source tables (total of 241 files):
