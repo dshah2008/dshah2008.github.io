@@ -45,18 +45,21 @@ The target variable *bps* indicating total points is present in *gw(n).csv*\
 **Observations**\
 \
 \- Target distribution (before filter)\
-<img src="images/Points distribution (before filter).JPG?raw=true"/>\
+<img src="images/Points distribution (before filter)1.JPG?raw=true"/>\
 \
 \- Target distribution (before filter)\
-<img src="images/Points distribution (after filter).JPG?raw=true"/>\
+<img src="images/Points distribution (after filter)1.JPG?raw=true"/>\
 \
 \- Several features have a correlation with the Target (bps)\
+\
 <img src="images/correlation matrix1.JPG?raw=true"/>\
 \
 \- Target distribution wrt Player Position\
+\
 <img src="images/bps_position_boxplot.JPG?raw=true"/>\
 \
 \- Target distribution wrt Team (best and worst)\
+\
 <img src="images/bps_team_boxplot.JPG?raw=true"/>\
 <br/><br/>
 
