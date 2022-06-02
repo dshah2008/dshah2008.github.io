@@ -29,8 +29,7 @@ Over the past few years, football teams globally have spent millions to analyze 
 Several solutions do exist, predicting player performance using similar data sources. However, most of these approaches use bagging or boosting-based regression models. They do not leverage time series information which is critical for capturing patterns in player form and they do not predict more than one timestep into the future. They also do not use Deep Learning despite the high variance and complexity in the data.\
 \
 **Contributions** \
-\
-I am the sole contributor in this project. All the code in the reponsitory has been developed only by me.\
+I am the sole contributor in this project. All the code in the reponsitory has been developed only by me.
 
 <br/><br/>
 
