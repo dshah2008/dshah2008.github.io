@@ -74,7 +74,7 @@ The target variable *bps* indicating total points is present in *gw(n).csv*\
 ## C. Implementation
 
 ### Data Preparation
-\
+
 The following steps were taken to prepare *master_data.csv*:\
 \- Aggregate gameweek data\
 \- Clean player name\
@@ -95,9 +95,9 @@ Further steps to prepare data for modeling:\
 \- Normalize data\
 \- For Random Forest: For features whose values are unknown for the future gameweek, shift values in data frame by 1 period\
 \- For LSTM: Create 3d input and output (n_samples x n_timesteps x n_features)\
-\
+
 ### Modeling
-\
+
 Two model architectures were implemented to solve the problem:\
 \
 \- *Random Forest*: Establish a baseline score\
@@ -112,7 +112,7 @@ There are several reasons behind choosing the LSTM Network over other statistica
 \- *Forecast multiple timesteps*:\
 \- *Capture high variance*:\
 \- *Mixed-input modeling*:\
-\
+
 
 ### 3. Support the selection of appropriate statistical tools and techniques
 
