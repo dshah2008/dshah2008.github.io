@@ -1,4 +1,4 @@
-# Player Performance Prediction in Football (Soccer)
+# Player Performance Prediction in Soccer
 <br/><br/>
 
 **GitHub Repository**\
