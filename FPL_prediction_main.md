@@ -44,21 +44,21 @@ The target variable *bps* indicating total points is present in *gw(n).csv*\
 \
 **Observations**\
 \
-\- Target distribution (before filter)\
+\- Target distribution is very sparse\
 <img src="images/Points distribution (before filter)1.JPG?raw=true"/>\
 \
-\- Target distribution (after filter)\
+\- Target distribution (after 0-50 filter) is right skewed\
 <img src="images/Points distribution (after filter)1.JPG?raw=true"/>\
 \
-\- Several features have a correlation with the Target (bps)\
+\- Several features are correlated with the Target (bps)\
 \
 <img src="images/correlation matrix1.JPG?raw=true"/>\
 \
-\- Target distribution wrt Player Position\
+\- Target distribution varies significantly based on Player Position\
 \
 <img src="images/bps_position_boxplot.JPG?raw=true"/>\
 \
-\- Target distribution wrt Team (best and worst)\
+\- Target distribution varies significantly based on Team (best and worst team displayed)\
 \
 <img src="images/bps_team_boxplot.JPG?raw=true"/>\
 <br/><br/>
