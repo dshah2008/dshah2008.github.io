@@ -1,5 +1,8 @@
 # Player Performance Prediction in Football (Soccer)
 <br/><br/>
+**GitHub Repository**\
+https://github.com/dshah2008/FPL_PlayerPerformancePredictor\
+\
 ### A. Overview 
 \
 **Use Case**\
@@ -8,7 +11,7 @@ Predict the points accumulated by each player in the next 5 gameweeks of the Eng
 **Objective** \
 I have an immense passion for football and I'm eager to improve my understanding of the game with the help of Machine Learning. I'm looking to develop my skillset in Deep Learning and Forecasting, and eventually contribute towards the increasing use of AI in the multi-billion dollar football industry.\
 \
-With this project, over multiple cycles, I plan to develop state-of-the-art models that can accurately forecast player performance multiple timesteps into the future. In this first version, I have simplified the problem to predict the average of the points scored in the next five games. The model used is a deep neural network that combines several LSTM and fully-connected layers.\
+With this project, over multiple cycles, I plan to develop state-of-the-art models that can accurately forecast player performance multiple timesteps into the future. In this first version, I have simplified the problem to predict the average of the points scored in the next five games. The prediction also does not consider players that do not make appearances. While these are strong restrictions, they help us establish a strong foundation while continuing to meet the business objective.\
 \
 **Background & Data Source** \
 Over the past few years, football teams globally have spent millions to analyze games and develop strategies using AI. Companies such as Opta help these football clubs collect and aggregate match data. A lot of their data is publicly available via the Fantasy Premier League game on https://fantasy.premierleague.com/. The data from this game is far richer and cleaner than any other public source on football statstics. Several developers have also maintained GitHub repositories that scrape weekly match data weekly from the game's website. For this project, I have used the https://github.com/vaastav/Fantasy-Premier-League repository as my data source. It contains several data tables including player performance data for every match played in the last 6 years, as well as data describing players, teams and fixtures.\
@@ -21,7 +24,12 @@ Over the past few years, football teams globally have spent millions to analyze 
 <img src="images/Points Trend - Bernardo Silva1.JPG?raw=true"/>\
 \
 **Other works** \
-Several solutions do exist, predicting player performance using similar data sources. However, most of these approaches use bagging or boosting-based regression models. They do not leverage time series information which is critical for capturing patterns in player form and they do not predict more than one timestep into the future. They also do not use Deep Learning despite the high variance and complexity in the data.
+Several solutions do exist, predicting player performance using similar data sources. However, most of these approaches use bagging or boosting-based regression models. They do not leverage time series information which is critical for capturing patterns in player form and they do not predict more than one timestep into the future. They also do not use Deep Learning despite the high variance and complexity in the data.\
+\
+**Contributions** \
+\
+I am the sole contributor in this project. All the code in the reponsitory has been developed only by me.\
+
 <br/><br/>
 
 ### B. Data and Design
@@ -93,7 +101,8 @@ Further steps to prepare data for modeling:\
 \
 **Modeling**\
 \
-
+The model used is a deep neural network that combines several LSTM and fully-connected layers.\
+\
 
 ### 3. Support the selection of appropriate statistical tools and techniques
 
