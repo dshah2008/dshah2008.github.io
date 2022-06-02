@@ -47,7 +47,7 @@ The target variable *bps* indicating total points is present in *gw(n).csv*\
 \- Target distribution (before filter)\
 <img src="images/Points distribution (before filter)1.JPG?raw=true"/>\
 \
-\- Target distribution (before filter)\
+\- Target distribution (after filter)\
 <img src="images/Points distribution (after filter)1.JPG?raw=true"/>\
 \
 \- Several features have a correlation with the Target (bps)\
