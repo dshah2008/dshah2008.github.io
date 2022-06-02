@@ -1,5 +1,6 @@
 # Player Performance Prediction in Soccer
-<font size="30">Player Performance Prediction in Soccer</font>
+
+<font size="50">Player Performance Prediction in Soccer</font>
 
 **GitHub Repository**\
 {:toc}
