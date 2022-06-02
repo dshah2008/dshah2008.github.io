@@ -8,7 +8,7 @@ https://github.com/dshah2008/FPL_PlayerPerformancePredictor
 ### A. Overview 
 \
 **Use Case**\
-Predict the points accumulated by each player in the next 5 gameweeks of the English Premier League. These points are tabulated by the *Fantasy Premier League* game and are one of the most recognized indicators of game-wise player performance.\
+Predict the points accumulated by each player in the next 5 gameweeks of the English Premier League. These points are tabulated by the *Fantasy Premier League* game and used in this project as the primary indicator of player performance.\
 \
 **Objective** \
 I have an immense passion for football and I'm eager to improve my understanding of the game with the help of Machine Learning. I'm looking to develop my skillset in Deep Learning and Forecasting, and eventually contribute towards the increasing use of AI in the multi-billion dollar football industry.\
