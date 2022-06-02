@@ -100,7 +100,7 @@ Further steps to prepare data for modeling:\
 \- For Random Forest: For features whose values are unknown for the future gameweek, shift values in data frame by 1 period\
 \- For LSTM: Create 3d input and output (n_samples x n_timesteps x n_features)\
 \
-#### Modeling
+### Modeling
 \
 Two model architectures were implemented to solve the problem:\
 \
