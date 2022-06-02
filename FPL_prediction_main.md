@@ -104,12 +104,15 @@ Further steps to prepare data for modeling:\
 \
 Two model architectures were implemented to solve the problem:\
 \
-\1. Random Forest - Establish a baseline score\
-\2. LSTM Network - Deep Neural Network with a combination of LSTM and fully-connected layers\
+1. Random Forest - Establish a baseline score\
+2. LSTM Network - Deep Neural Network with a combination of LSTM and fully-connected layers\
 \
 There are several reasons behind choosing the LSTM Network over other statistical, ML and DL models:\
+\
 \- *Learn sequential patterns*: This is vital for our problem since in most sports, player performance is primarily dependent on the player's form going in to the game. This makes LSTM more powerful than ML regression models.\
+\
 \- *Learn from multiple time series*: Since we build forecasts for more than 500 players, we have more than 500 time series that need to be learnt. With existing implementations of forecasting models like ARIMA, you would need to build a separate model for each series. You could use VAR models but they would require very high dimensionality since each series would be a separate feature. With LSTM, each time series is passed as a group of data samples, allowing you to train them in a single model.\
+\
 \- *Forecast multiple timesteps*:\
 \- *Capture high variance*:\
 \- *Mixed-input modeling*:\
