@@ -1,9 +1,7 @@
 # Player Performance Prediction in Soccer
 
-<font size="50">Player Performance Prediction in Soccer</font>
-
-**GitHub Repository**\
-{:toc}
+**Table of Contents**\
+* TOC {:toc}{:toc}
 
 **GitHub Repository**\
 https://github.com/dshah2008/FPL_PlayerPerformancePredictor
