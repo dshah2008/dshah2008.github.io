@@ -1,7 +1,8 @@
 # Player Performance Prediction in Football (Soccer)
 <br/><br/>
 **GitHub Repository**\
-https://github.com/dshah2008/FPL_PlayerPerformancePredictor\
+https://github.com/dshah2008/FPL_PlayerPerformancePredictor
+\
 \
 ### A. Overview 
 \
