@@ -1,10 +1,10 @@
 # Player Performance Prediction in Soccer
 
 **Table of Contents**\
-* TOC {:toc}{:toc}
+* TOC {:toc}
 
 **GitHub Repository**\
-https://github.com/dshah2008/FPL_PlayerPerformancePredictor
+[title](https://github.com/dshah2008/FPL_PlayerPerformancePredictor)
 <br/><br/>
 
 ## A. Overview 
