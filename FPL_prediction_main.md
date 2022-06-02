@@ -6,8 +6,8 @@ https://github.com/dshah2008/FPL_PlayerPerformancePredictor
 <br/><br/>
 
 ## A. Overview 
-
-### Use Case
+\
+**Objective & Scope** \
 Predict the points accumulated by each player in the next 5 gameweeks of the English Premier League. These points are tabulated by the *Fantasy Premier League* game and used in this project as the primary indicator of player performance.\
 \
 **Objective & Scope** \
@@ -33,16 +33,14 @@ I am the sole contributor in this project. All the code in the reponsitory has b
 
 <br/><br/>
 
-### B. Data and Design
+## B. Data and Design
 \
 **Design**\
-\
 Two Python notebooks were used to code the solution:\
 \- *Data Prep and EDA.ipynb* : Aggregates and Cleans data to generate *master_data.csv*. Also contains EDA graphs.\
 \- *LSTM Player Forecast.ipynb* : Data Modeling and Evaluation\
 \
 **Data**\
-\
 Data has been aggregated from the following source tables (total of 241 files):\
 \- gw(n).csv : Player performance data for each gameweek. Total of 38 gameweeks x 6 seasons = 228 files.\
 \- fixtures.csv : List of all fixtures for the season = 6 files. It contains team IDs and kickoff times.\
@@ -52,7 +50,6 @@ Data has been aggregated from the following source tables (total of 241 files):\
 The target variable *bps* indicating total points is present in *gw(n).csv*\
 \
 **Observations**\
-\
 \- Target is very sparse (has many 0s)\
 <img src="images/Points distribution (before filter)1.JPG?raw=true"/>\
 \
@@ -75,9 +72,9 @@ The target variable *bps* indicating total points is present in *gw(n).csv*\
 <img src="images/bps_team_boxplot.JPG?raw=true"/>\
 <br/><br/>
 
-### C. Implementation
-\
-**Data Preparation**\
+## C. Implementation
+
+### Data Preparation
 \
 The following steps were taken to prepare *master_data.csv*:\
 \- Aggregate gameweek data\
