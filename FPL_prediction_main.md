@@ -10,10 +10,10 @@ https://github.com/dshah2008/FPL_PlayerPerformancePredictor
 **Use Case**\
 Predict the points accumulated by each player in the next 5 gameweeks of the English Premier League. These points are tabulated by the *Fantasy Premier League* game and used in this project as the primary indicator of player performance.\
 \
-**Objective** \
+**Objective & Scope** \
 I have an immense passion for football and I'm eager to improve my understanding of the game with the help of Machine Learning. I'm looking to develop my skillset in Deep Learning and Forecasting, and eventually contribute towards the increasing use of AI in the multi-billion dollar football industry.\
 \
-With this project, over multiple cycles, I plan to develop state-of-the-art models that can accurately forecast player performance multiple timesteps into the future. In this first version, I have simplified the problem to predict the average of the points scored in the next five games. The prediction also does not consider players that do not make appearances. While these are strong restrictions, they help us establish a strong foundation while continuing to meet the business objective.\
+With this project, over multiple cycles, I plan to develop state-of-the-art models that can accurately forecast player performance multiple timesteps into the future. In this first version, I have simplified the problem to predict the average of the points scored in the next five games. The prediction also only considers appearances that accumulate between 0 and 50 points. While these are tight restrictions, they help us build a strong foundation while continuing to meet the overall objective.\
 \
 **Background & Data Source** \
 Over the past few years, football teams globally have spent millions to analyze games and develop strategies using AI. Companies such as Opta help these football clubs collect and aggregate match data. A lot of their data is publicly available via the Fantasy Premier League game on https://fantasy.premierleague.com/. The data from this game is far richer and cleaner than any other public source on football statstics. Several developers have also maintained GitHub repositories that scrape weekly match data weekly from the game's website. For this project, I have used the https://github.com/vaastav/Fantasy-Premier-League repository as my data source. It contains several data tables including player performance data for every match played in the last 6 years, as well as data describing players, teams and fixtures.\
