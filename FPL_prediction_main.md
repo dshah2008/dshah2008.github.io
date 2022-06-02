@@ -44,10 +44,10 @@ The target variable *bps* indicating total points is present in *gw(n).csv*\
 \
 **Observations**\
 \
-\- Target distribution is very sparse\
+\- Target is very sparse (has many 0s)\
 <img src="images/Points distribution (before filter)1.JPG?raw=true"/>\
 \
-\- Target distribution (after 0-50 filter) is right skewed\
+\- Target (after 0-50 filter) is right skewed\
 <img src="images/Points distribution (after filter)1.JPG?raw=true"/>\
 \
 \- Several features are correlated with the Target (bps)\
