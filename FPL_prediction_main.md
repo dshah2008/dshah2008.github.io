@@ -1,6 +1,6 @@
 # Player Performance Prediction in Soccer
 
-**Table of Contents**\
+**Table of Contents**
 * TOC 
 {:toc}
 
