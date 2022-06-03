@@ -1,7 +1,7 @@
 # Player Performance Prediction in Soccer
 \
 **Table of Contents**
-* TOC 
+* TOC
 {:toc}
 
 [View GitHub Repository](https://github.com/dshah2008/FPL_PlayerPerformancePredictor)
