@@ -105,18 +105,21 @@ Two model architectures were implemented to solve the problem:\
 \- **Random Forest**: Establish a baseline score\
 \- **LSTM Network**: Deep Neural Network with a combination of LSTM and fully-connected layers\
 \
+**LSTM Architecture**\
+\
+<img src="images/Model Architecture1.JPG?raw=true"/>\
+\
 There are several reasons behind choosing the LSTM Network over other statistical, ML and DL models:\
 \
 \- **Learn sequential patterns**: This is vital for our problem since in most sports, player performance is primarily dependent on the player's form going in to the game. This makes LSTM more powerful than ML regression models.\
 \
 \- **Learn from multiple time series**: Since we build forecasts for more than 500 players, we have more than 500 time series that need to be learnt. With existing implementations of forecasting models like ARIMA, you would need to build a separate model for each series. You could use VAR models but they would require very high dimensionality since each series would be a separate feature. With LSTM, each time series is passed as a group of data samples, allowing you to train them in a single model.\
 \
-\- **Forecast multiple timesteps**:\
-\- **Capture high variance**:\
-\- **Mixed-input modeling**:\
-
-
-### 3. Support the selection of appropriate statistical tools and techniques
-
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+\- **Forecast multiple timesteps**: Although the current implementation predicts only one output, the 3rd LSTM layer predicts an output sequence for the next 5 games. This allows the model to not only learn from the player's recent trend, but also from features whose values differ for each of the 5 games. The multi-timestep output which will be implemented in the next iteration of the project will require adjustments to only the final LSTM and dense layers. Such a Seq2Seq architecture makes this model more suited to the problem than any other regression model.\
+\
+\- **Multi-input modeling**: Although LSTM doesn't inherently implement a Seq2Seq architecture, the use of inputs at different layers allows the model to learn the known future features such as *opponent* and *home_vs_away*.\
+\
+\- **Capture high variance**: As with all deep learning models, multiple layers and large number of neurons allows the model to learn the high variance while also introducing sufficient bias through regularization.\
+\
+### Evaluation
 
