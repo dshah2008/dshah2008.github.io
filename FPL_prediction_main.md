@@ -140,7 +140,7 @@ Procedure: A rolling-window evaluation process is used where in the first iterat
 
 <br/>
 
-The LSTM model performs significantly better than the Random Forest based on the Mean Squared Error and Mean Absolute Error for Test data.\
+The LSTM model performs significantly better than the Random Forest model based on the Mean Squared Error and Mean Absolute Error for Test data.\
 \
 \
 Following is a comparison of actual and predicted values for the LSTM (most recent gameweek for 50 players).\
