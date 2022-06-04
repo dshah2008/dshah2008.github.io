@@ -123,3 +123,16 @@ There are several reasons behind choosing the LSTM Network over other statistica
 
 ### Evaluation
 
+Metrics: Mean Squared Error, Mean Absolute Error\
+\
+Procedure: A rolling-window evaluation process is used where in the first iteration, the model tests on N-4 to N timesteps and Trains on 0 to N-5 timesteps. N is the total no. of timesteps. In the second iteration, model tests on N-9 to N-5 timesteps and trains on 0 to N-10 timesteps. This continues until all the test data has been evluated. For a single output model, the model tests on the average of N-4 to N timesteps.
+
+<br/><br/>
+
+## D. Results and Next Steps
+
+### Results
+
+
+
+### Next Steps
