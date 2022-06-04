@@ -145,7 +145,7 @@ The LSTM model performs significantly better than the Random Forest based on the
 \
 Following is a comparison of actual and predicted values for the LSTM (most recent gameweek for 50 players).\
 \
-<img src="images/Model Architecture1.JPG?raw=true"/>
+<img src="images/results1.JPG?raw=true"/>
 
 
 ### Next Steps
