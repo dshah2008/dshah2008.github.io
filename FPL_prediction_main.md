@@ -93,7 +93,7 @@ The following steps were taken to prepare *master_data.csv*:\
 \
 Further steps to prepare data for modeling:\
 \- Adjust column types and sort rows by kickoff_time\
-\- Filter data for *bps* between 0 and 50, done only in this version to limit the scope of the project\
+\- Filter data for *bps* between 0 and 50, done only in this version to limit the scope of the project. This filter is different from outlier removal which would be done only on Training data.\
 \- Filter for players who have played a total of at least 38 games across all seasons
 \- Normalize data\
 \- For Random Forest: For features whose values are unknown for the future gameweek, shift values in data frame by 1 period\
@@ -125,7 +125,7 @@ There are several reasons behind choosing the LSTM Network over other statistica
 
 Metrics: Mean Squared Error, Mean Absolute Error\
 \
-Procedure: A rolling-window evaluation process is used where in the first iteration, the model tests on N-4 to N timesteps and Trains on 0 to N-5 timesteps. N is the total no. of timesteps. In the second iteration, model tests on N-9 to N-5 timesteps and trains on 0 to N-10 timesteps. This continues until all the test data has been evluated. For a single output model, the model tests on the average of N-4 to N timesteps.
+Procedure: After a standard holdout Train-Val-Test split, a rolling-window evaluation process is used where in the first iteration, the model tests on N-4 to N timesteps and Trains on 0 to N-5 timesteps. N is the total no. of timesteps. In the second iteration, model tests on N-9 to N-5 timesteps and trains on 0 to N-10 timesteps. This continues until all the test data has been evluated. For a single output model, the model tests on the average of N-4 to N timesteps.
 
 <br/><br/>
 
@@ -140,7 +140,7 @@ Procedure: A rolling-window evaluation process is used where in the first iterat
 
 <br/>
 
-The LSTM model performs significantly better than the Random Forest model based on the Mean Squared Error and Mean Absolute Error for Test data.\
+While the Random Forest has a lower Training error, it does overfit. On the unseen Test data, the LSTM model performs significantly better based on both Mean Squared Error and Mean Absolute Error.\
 \
 \
 Following is a comparison of actual and predicted values for the LSTM (most recent gameweek for 50 players).\
