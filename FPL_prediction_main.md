@@ -133,6 +133,17 @@ Procedure: A rolling-window evaluation process is used where in the first iterat
 
 ### Results
 
+|               |      Train       |       Test        |
+|     Model     |  MSE   |   MAE   |   MSE   |   MAE   |
+| ------------- | ------ | ------- | ------- | ------- |
+| Random Forest | 0.0049 | 0.0548  | 0.0350  | 0.1475  |
+|     LSTM      | 0.0111 | 0.0836  | 0.0110  | 0.0804  |
+\
+LSTM performs significantly better than Random Forest for both Test Mean Squared Error and Mean Absolute Error.\
+\
+Following is a comparison of actual and predicted values for the LSTM (most recent gameweek for 50 players).\
+\
+<img src="images/Model Architecture1.JPG?raw=true"/>
 
 
 ### Next Steps
