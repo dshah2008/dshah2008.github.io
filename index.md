@@ -6,7 +6,7 @@
 
 [Football Player Performance Prediction with LSTM (click here for details)](/FPL_prediction_main.md)
 
-<img src="images/footballplayer1.JPG?raw=true"/>
+<img src="images/footballplayer1.jpg?raw=true"/>
 
 ---
 [Sklearn Custom Pipelines with Optuna Tuning](http://example.com/)
