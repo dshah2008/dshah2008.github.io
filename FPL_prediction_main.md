@@ -125,7 +125,9 @@ There are several reasons behind choosing the LSTM Network over other statistica
 
 Metrics: Mean Squared Error, Mean Absolute Error\
 \
-Procedure: After a standard holdout Train-Val-Test split, a rolling-window evaluation process is used where in the first iteration, the model tests on N-4 to N timesteps and Trains on 0 to N-5 timesteps. N is the total no. of timesteps. In the second iteration, model tests on N-9 to N-5 timesteps and trains on 0 to N-10 timesteps. This continues until all the test data has been evluated. For a single output model, the model tests on the average of N-4 to N timesteps.
+Validation: After a holdout Train-Val-Test split, a rolling-window evaluation process is used where in the first iteration, the model tests on N-4 to N timesteps and Trains on 0 to N-5 timesteps. N is the total no. of timesteps. In the second iteration, model tests on N-9 to N-5 timesteps and trains on 0 to N-10 timesteps. This continues until all the test data has been evluated. For a single output model, the model tests on the average of N-4 to N timesteps.\
+\
+Tuning: The model is tuned with the help of Optuna's Random Sampler and Median Pruner
 
 <br/><br/>
 
