@@ -150,7 +150,7 @@ Following is a comparison of actual and predicted values for the LSTM (most rece
 
 ### Next Steps
 
-- Forecast next 5 timesteps for each player instead of the single average prediction\
+\- Forecast next 5 timesteps for each player instead of the single average prediction\
 \- Additional data and features: Opponent history, team formations, player position breakdown, injury news\
 \- Improve encoding: use rolling average of points to encode *team* and *opponent* instead of just previous season totals\
 \- Remove data filters\
