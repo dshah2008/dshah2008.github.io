@@ -52,8 +52,6 @@ Data has been aggregated from the following source tables (total of 241 files):\
 \- master_team_list.csv : Team ID and name mapping for each season in 1 file.\
 \- players_raw.csv : Contains player position information for each season = 6 files.\
 \
-The target variable *bps* indicating total points is present in *gw(n).csv*\
-\
 **Observations**\
 \- Target is very sparse (has many 0s)\
 <img src="images/Points distribution (before filter)1.JPG?raw=true"/>\
@@ -141,7 +139,7 @@ Tuning: The model is tuned with the help of Optuna's Random Sampler and Median P
 |     Model     | Train MSE | Train MAE | Test MSE | Test MAE |
 | ------------- | --------- | --------- | -------- | -------- |
 | Random Forest |  0.0049   |  0.0548   |  0.0350  |  0.1475  |
-|     LSTM      |  0.0111   |  0.0836   |  0.0110  |  0.0804  |
+|     LSTM      |  0.0115   |  0.0859   |  0.0108  |  0.0817  |
 
 <br/>
 
