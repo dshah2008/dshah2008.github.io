@@ -148,7 +148,7 @@ While the Random Forest has a lower Training error, it does overfit. On the unse
 \
 Following is a comparison of actual and predicted values for the LSTM (most recent gameweek for 50 players).\
 \
-<img src="images/results1.JPG?raw=true"/>
+<img src="images/results1.png?raw=true"/>
 
 
 ### Next Steps
