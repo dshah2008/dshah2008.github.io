@@ -123,9 +123,9 @@ For this project, we observe 2 mAP values:\
 
 The final model was tested on an independent dataset with 136 images.\
 \
-<img src="images/model_versions1.png?raw=true"/>
+<img src="images/result_map1.png?raw=true"/>
 
-<img src="images/model_versions1.png?raw=true"/>
+<img src="images/result_cm1.png?raw=true"/>
 
 Based on the mAP table above, at a localization of 0.5 IoU, our model produces a high mAP of 89%. If we opt for very accurate localization, the mAP drops to 60%. However, for this business problem, an IoU of 0.5 is sufficient.\
 \
@@ -133,11 +133,11 @@ Our model is very accurate with its ‘With Mask’ predictions. However, for �
 \
 We further examine the Validation loss shown below to ensure our model robustness. At 100 epochs, our model is stable in terms of both localization and classification.\
 \
-<img src="images/model_versions1.png?raw=true"/>
+<img src="images/result_valloss1.png?raw=true"/>
 
 The model also performs well on Video footage. The attached notebook demonstrates this on a sample 60 second video clip. Below is a sample of predictions on the test images.\
 \
-<img src="images/model_versions1.png?raw=true"/>
+<img src="images/result_sample1.jpg?raw=true"/>
 
 ### Next Steps - Deployment
 
@@ -145,14 +145,14 @@ Our next step would be to work towards Deploying the model in a production envir
 \
 One such option is to use the Azure Video Analyzer service, allowing users to connect cameras directly to the cloud. This will eliminate the need for edge devices. The connection could be made via a remote device adapter. Following is a detailed architecture.\
 \
-<img src="images/model_versions1.png?raw=true"/>
+<img src="images/deploy1.png?raw=true"/>
 
 Once the model is deployed, ML-Ops services on Azure can be used to maintain and monitor the performance of models in production.
 
 ### Next Steps - Model Improvement
 
 For our model to be production-ready, the following improvements would need to be made:\
-\-	Include additional data on ‘Incorrectly-worn mask’ faces and convert the solution to a 3-class problem\
+\-	Include additional data on *Incorrectly-worn mask* faces and convert the solution to a 3-class problem\
 \-	Add data for ‘No Mask’ and background to improve its Recall as explained in the Results section\
 \-	Improve racial diversity of data
 
