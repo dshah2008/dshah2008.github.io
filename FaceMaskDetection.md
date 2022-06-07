@@ -66,10 +66,10 @@ In RCNNs, region proposals are created and detection is performed for each, wher
 Since our problem relies heavily on both accuracy and speed, YOLO was our architecture of choice. We also went with Yolov5 since it is the latest and most supported version.\
 \
 **Model Architecture** \
-\3 main components:\
-\1.	Backbone: CSPDarknet is employed as the backbone for feature extraction from images consisting of cross-stage partial networks\
-\2.	Neck: PANet used to generate a feature pyramids network to perform aggregation on features and pass forward to head for prediction\ 
-\3.	Head: Layers that generate predictions from the anchor boxes for object detection\
+3 main components:\
+1.	Backbone: CSPDarknet is employed as the backbone for feature extraction from images consisting of cross-stage partial networks\
+2.	Neck: PANet used to generate a feature pyramids network to perform aggregation on features and pass forward to head for prediction\ 
+3.	Head: Layers that generate predictions from the anchor boxes for object detection\
 \
 <img src="images/model_arch1.png?raw=true"/>
 \
