@@ -78,8 +78,6 @@ There are 5 different versions of YOLOv5. The larger the model size, the more th
 \
 <img src="images/model_versions1.png?raw=true"/>
 
-<br/>
-
 ### Experimentation
 
 We conducted a comprehensive experimentation process. We can break it down into 3 phases:\
