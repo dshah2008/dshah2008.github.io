@@ -4,7 +4,7 @@
 
 ### Personal Projects
 
-[Topic Classification of Customer Support Requests (click here to view)](http://example.com/)
+[NLP Topic Classification of Customer Support Requests (click here to view)](http://example.com/)
 
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
