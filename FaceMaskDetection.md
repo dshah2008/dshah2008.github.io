@@ -133,15 +133,17 @@ The final model was tested on an independent dataset with 136 images.\
 
 Based on the mAP table, at a localization of 0.5 IoU, our model produces a high mAP of 89%. If we opt for very accurate localization, the mAP drops to 60%. However, for this business problem, an IoU of 0.5 is sufficient.\
 \
-Our model is very accurate with its ‘With Mask’ predictions. However, for ‘No Mask’, it has a low Recall. If we look at the Confusion Matrix, a significant number of ‘No Mask’ faces are not identified in the image and simply treated as background. The key reason behind such misclassification is the limited number of training images containing ‘No Mask’ faces as well as only background images.\
+Our model is very accurate with its *With Mask* predictions. However, for *No Mask*, it has a low Recall. If we look at the Confusion Matrix, a significant number of *No Mask* faces are not identified in the image and simply treated as background. The key reason behind such misclassification is the limited number of training images containing *No Mask* faces as well as only background images.\
 \
 We further examine the Validation loss shown below to ensure our model robustness. At 100 epochs, our model is stable in terms of both localization and classification.\
 \
 <img src="images/result_valloss1.png?raw=true"/>
 
-The model also performs well on Video footage. The attached notebook demonstrates this on a sample 60 second video clip. Below is a sample of predictions on the test images.\
+Below is a sample of predictions on the test images.\
 \
 <img src="images/result_sample1.jpg?raw=true"/>
+
+The model also performs well on Video footage. The python notebook demonstrates this on a sample 60 second video clip. 
 
 ### Next Steps - Deployment
 
@@ -157,6 +159,6 @@ Once the model is deployed, ML-Ops services on Azure can be used to maintain and
 
 For our model to be production-ready, the following improvements would need to be made:\
 \-	Include additional data on *Incorrectly-worn mask* faces and convert the solution to a 3-class problem\
-\-	Add data for ‘No Mask’ and background to improve its Recall as explained in the Results section\
+\-	Add training images for *No Mask* and background to improve the Recall\
 \-	Improve racial diversity of data
 
