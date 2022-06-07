@@ -18,7 +18,7 @@
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
-[Face Mask Detection with Yolov5 (click here to view)](http://example.com/)
+[Face Mask Detection with Yolov5 (click here to view)](/FaceMaskDetection.md)
 <img src="images/facemask-covid19.JPG?raw=true"/>
 
 ---
