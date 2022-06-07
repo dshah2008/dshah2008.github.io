@@ -36,8 +36,8 @@ Dhrumel Shah - Modeling
 
 ## B. Data
 \
-**Data**\
 Two data sources were used:\
+\
 A. Data from Kaggle containing 853 images. The images capture different public scenarios in which people are either wearing a mask (correctly or incorrectly) or not wearing a mask. [View Dataset link](https://www.kaggle.com/datasets/andrewmvd/face-mask-detection)\
 B. Additional data containing 54 images from random online searches that focused on images of faces without masks and from side angles.\
 \
