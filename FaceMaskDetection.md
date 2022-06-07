@@ -1,4 +1,4 @@
-# Player Performance Prediction in Soccer
+# Face Mask Detection with Yolov5
 \
 **Table of Contents**
 * TOC
@@ -28,72 +28,30 @@ While there are many existing solutions to this problem, the common approaches o
 \-	People moving at a fast pace\
 \-	Identifying objects in complex backgrounds\
 \
-**Acknowledgement** \
-For the data source, I have used a public respository owned by Vaastav Anand: [https://github.com/vaastav/Fantasy-Premier-League](https://github.com/vaastav/Fantasy-Premier-League).
+**Contributions** \
+Ting Lan - Data Preparation
+Myself - Modeling
 
 <br/><br/>
 
-## B. Data and Design
-\
-**Design**\
-Two Python notebooks were used to code the solution:\
-\- *Data Prep and EDA.ipynb* : Aggregates and Cleans data to generate *master_data.csv*. Also contains EDA graphs.\
-\- *LSTM Player Forecast.ipynb* : Data Modeling and Evaluation\
+## B. Data
 \
 **Data**\
-Data has been aggregated from the following source tables (total of 241 files):\
-\- gw(n).csv : Player performance data for each gameweek. Total of 38 gameweeks x 6 seasons = 228 files.\
-\- fixtures.csv : List of all fixtures for the season = 6 files. It contains team IDs and kickoff times.\
-\- master_team_list.csv : Team ID and name mapping for each season in 1 file.\
-\- players_raw.csv : Contains player position information for each season = 6 files.\
+Two data sources were used:\
+\A.	Data from Kaggle containing 853 images. The images capture different public scenarios in which people are either wearing a mask (correctly or incorrectly) or not wearing a mask. [View Dataset link](https://www.kaggle.com/datasets/andrewmvd/face-mask-detection)\
+\B.	Additional data containing 54 images from random online searches that focused on images of faces without masks and from side angles.\
 \
-**Observations**\
-\- Target is very sparse (has many 0s)\
-<img src="images/Points distribution (before filter)1.JPG?raw=true"/>\
-\
-\- Target (after 0-50 filter) is right skewed\
-<img src="images/Points distribution (after filter)1.JPG?raw=true"/>\
-\
-\
-\- Several features are correlated with the Target (bps)\
+Additional data was incorporated since data from the source A was heavily biased towards faces with masks only. It also did not contain enough samples with faces at different angles.\
 \
 <img src="images/correlation matrix1.JPG?raw=true"/>\
 \
-\
-\- Target distribution varies significantly based on Player Position\
-\
-<img src="images/bps_position_boxplot.JPG?raw=true"/>\
-\
-\
-\- Target distribution varies significantly based on Team (best and worst team displayed)\
-\
-<img src="images/bps_team_boxplot.JPG?raw=true"/>\
-<br/><br/>
-
 ## C. Implementation
 
 ### Data Preparation
 
-The following steps were taken to prepare *master_data.csv*:\
-\- Aggregate gameweek data\
-\- Clean player name\
-\- Filter out blank fixtures\
-\- Create fixture list from raw data for 16-17 and 17-18 seasons (not present in fixture file)\
-\- Map team ID to team names\
-\- Create *team_goals_scored* and *team_goals_conceded* features\
-\- Get missing position from player data\
-\- Filter out player-club occurences that total 0 minutes\
-\- Create *player_kickoff_id*\
-\- Encode team and opponent categories based on total goals scored and conceded in the previous season\
-\- Encode position with average points per minute\
-\
-Further steps to prepare data for modeling:\
-\- Adjust column types and sort rows by kickoff_time\
-\- Filter data for *bps* between 0 and 50, done only in this version to limit the scope of the project. This filter is different from outlier removal which would be done only on Training data.\
-\- Filter for players who have played a total of at least 38 games across all seasons
-\- Normalize data\
-\- For Random Forest: For features whose values are unknown for the future gameweek, shift values in data frame by 1 period\
-\- For LSTM: Create 3d input and output (n_samples x n_timesteps x n_features)
+\- Reformat annotation files\
+\- Convert from a 3-class to a 2-class problem (partially-worn masks are outside the scope)\
+\- Train, validation and test splits
 
 ### Modeling
 
