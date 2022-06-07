@@ -29,7 +29,7 @@ While there are many existing solutions to this problem, the common approaches o
 \-	Identifying objects in complex backgrounds\
 \
 **Contributions** \
-Ting Lan - Data Preparation
+Ting Lan - Data Preparation\
 Myself - Modeling
 
 <br/><br/>
