@@ -4,21 +4,22 @@
 
 ### Personal Projects
 
+[Topic Classification of Customer Support Requests (click here to view)](http://example.com/)
+
+<img src="images/dummy_thumbnail.jpg?raw=true"/>
+
+---
 [Football Player Performance Prediction with LSTM (click here to view)](/FPL_prediction_main.md)
 
 <img src="images/footballplayer1.jpg?raw=true"/>
 
 ---
-[Sklearn Custom Pipelines with Optuna Tuning](http://example.com/)
+[Faulty Water Pump Classification (click here to view)](http://example.com/)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
-[Class-based Outlier Detection](http://example.com/)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
-
----
-[NLP Sentiment Analysis of Amazon Reviews](http://example.com/)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+[Face Mask Detection with Yolov5 (click here to view)](http://example.com/)
+<img src="images/facemask-covid19.JPG?raw=true"/>
 
 ---
 
