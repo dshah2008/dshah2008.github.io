@@ -47,7 +47,7 @@ Additional data was incorporated since data from the source A was heavily biased
 
 <br/>
 
-## C. Implementation
+## C. Design & Implementation
 
 ### Data Preparation
 
@@ -57,37 +57,32 @@ Additional data was incorporated since data from the source A was heavily biased
 
 ### Modeling
 
-Two model architectures were implemented to solve the problem:\
-\- **Random Forest**: Establish a baseline score\
-\- **LSTM Network**: Deep Neural Network with a combination of LSTM and fully-connected layers\
+**Why Deep Learning CNNs?** \
+Object Detection had been implemented for several decades using traditional Computer Vision techniques. However, 2014 marked a significant paradigm shift as CNN-based models began dominate the Computer Vision space in terms of both accuracy and speed. While neural networks have an obvious advantage of being able to learn from millions of images with large number of layers and parameters, CNNs specifically are useful due to several reasons. The Convolution operations are vital for capturing spatial information from images, while Pooling helps filter the relevant information and helps reduce dimensions.\
 \
-**LSTM Architecture**\
+**YOLO v5** \
+YOLO, or You Only Look Once, was introduced in 2016 and was a big improvement on RCNN models as it produced similar detection accuracy but was significantly faster. 
+In RCNNs, region proposals are created and detection is performed for each, whereas with YOLO, the entire image is passed through the network just once. The network also simultaneously predicts multiple bounding boxes and class probabilities for those boxes. Detection is treated like a regression problem, making it even faster. 
+Since our problem relies heavily on both accuracy and speed, YOLO was our architecture of choice. We also went with Yolov5 since it is the latest and most supported version.\
 \
-<img src="images/Model Architecture1.JPG?raw=true"/>\
+**Model Architecture** \ 
+3 main components: 
+\1.	Backbone: CSPDarknet is employed as the backbone for feature extraction from images consisting of cross-stage partial networks\
+\2.	Neck: PANet used to generate a feature pyramids network to perform aggregation on features and pass forward to head for prediction.\ 
+\3.	Head: Layers that generate predictions from the anchor boxes for object detection.\
 \
-There are several reasons behind choosing the LSTM Network over other statistical, ML and DL models:\
+<img src="images/model_arch1.png?raw=true"/>
 \
-\- **Learn sequential patterns**: This is vital for our problem since in most sports, player performance is primarily dependent on the player's form going in to the game. This makes LSTM more powerful than ML regression models.\
+There are 5 different versions of YOLOv5. The larger the model size, the more the parameters and longer the inference time. Based on our computational resources and dataset size, we opted for YOLOv5s, but also experimented with v5m.\
 \
-\- **Learn from multiple time series**: Since we build forecasts for more than 500 players, we have more than 500 time series that need to be learnt. With existing implementations of forecasting models like ARIMA, you would need to build a separate model for each series. You could use VAR models but they would require very high dimensionality since each series would be a separate feature. With LSTM, each time series is passed as a group of data samples, allowing you to train them in a single model.\
-\
-\- **Forecast multiple timesteps**: Although the current implementation predicts only one output, the 3rd LSTM layer predicts an output sequence for the next 5 games. This allows the model to not only learn from the player's recent trend, but also from features whose values differ for each of the 5 games. The multi-timestep output which will be implemented in the next iteration of the project will require adjustments to only the final LSTM and dense layers. Such a Seq2Seq architecture makes this model more suited to the problem than any other regression model.\
-\
-\- **Multi-input modeling**: Although LSTM doesn't inherently implement a Seq2Seq architecture, the use of inputs at different layers allows the model to learn the known future features such as *opponent* and *home_vs_away*.\
-\
-\- **Capture high variance**: As with all deep learning models, multiple layers and large number of neurons allows the model to learn the high variance while also introducing sufficient bias through regularization.
+<img src="images/model_versions1.png?raw=true"/>
 
-### Evaluation
+<br/>
 
-Metrics: Mean Squared Error, Mean Absolute Error\
-\
-Validation: After a holdout Train-Val-Test split, a rolling-window evaluation process is used where in the first iteration, the model tests on N-4 to N timesteps and Trains on 0 to N-5 timesteps. N is the total no. of timesteps. In the second iteration, model tests on N-9 to N-5 timesteps and trains on 0 to N-10 timesteps. This continues until all the test data has been evluated. For a single output model, the model tests on the average of N-4 to N timesteps.\
-\
-Tuning: The model is tuned with the help of Optuna's Random Sampler and Median Pruner
+## D. Experimentation
 
-<br/><br/>
 
-## D. Results and Next Steps
+## E. Results
 
 ### Results
 
