@@ -43,8 +43,8 @@ B. Additional data containing 54 images from random online searches that focused
 \
 Additional data was incorporated since data from the source A was heavily biased towards faces with masks only. It also did not contain enough samples with faces at different angles.\
 \
-<img src="images/correlation matrix1.JPG?raw=true"/>\
-\
+<img src="images/class_dist1.png?raw=true"/>\
+
 ## C. Implementation
 
 ### Data Preparation
