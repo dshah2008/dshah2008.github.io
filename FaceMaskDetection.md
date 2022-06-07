@@ -123,11 +123,15 @@ For this project, we observe 2 mAP values:\
 
 The final model was tested on an independent dataset with 136 images.\
 \
+mAP scores:\
+\
 <img src="images/result_map1.png?raw=true"/>
 
+Confusion Matrix:\
+\
 <img src="images/result_cm1.png?raw=true"/>
 
-Based on the mAP table above, at a localization of 0.5 IoU, our model produces a high mAP of 89%. If we opt for very accurate localization, the mAP drops to 60%. However, for this business problem, an IoU of 0.5 is sufficient.\
+Based on the mAP table, at a localization of 0.5 IoU, our model produces a high mAP of 89%. If we opt for very accurate localization, the mAP drops to 60%. However, for this business problem, an IoU of 0.5 is sufficient.\
 \
 Our model is very accurate with its ‘With Mask’ predictions. However, for ‘No Mask’, it has a low Recall. If we look at the Confusion Matrix, a significant number of ‘No Mask’ faces are not identified in the image and simply treated as background. The key reason behind such misclassification is the limited number of training images containing ‘No Mask’ faces as well as only background images.\
 \
