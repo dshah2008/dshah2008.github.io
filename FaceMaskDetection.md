@@ -80,10 +80,26 @@ There are 5 different versions of YOLOv5. The larger the model size, the more th
 
 <br/>
 
-## D. Experimentation
+### Experimentation
 
+We conducted a comprehensive experimentation process. We can break it down into 3 phases:
+1.	Evaluation of an existing solution using FaceNet for Localization and MobileNetV2 for Classification. It produced unsatisfactory results on the test dataset
+2.	Implementing Yolov5 on our existing dataset, experimenting with the architecture and tuning a few key hyperparameters. This improved our results
+3.	Generating new data and appending it to our dataset. Further experimentation with architecture and complete hyperparameter tuning. The additional data helped produce another significant improvement in the results, beating all our benchmark scores
+\
+\
+In phase 2 and 3, we carried out further experiments to help determine the best possible architecture and key hyperparameter values. We evaluated Yolov5 with the following:\
+\-	Yolov5s with different pre-trained weights: None, 5s, 5s6\
+\-	Freezing layers: 0, 3, 5, 7, 10, 18, 24(all)\
+\-	Incorporate new data and repeat previous steps\
+\-	Changed image size: 480, 640(default), 1280\
+\-	Yolov5m: ‘m’ version is a bigger model with more parameters than ‘s’\
+\-	Complete hyperparameter tuning using the evolve function\
+\-	Increase epochs
 
-## E. Results
+<br/>
+
+## D. Results
 
 ### Results
 
