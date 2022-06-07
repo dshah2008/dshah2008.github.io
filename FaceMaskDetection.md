@@ -32,7 +32,7 @@ While there are many existing solutions to this problem, the common approaches o
 Ting Lan - Data Preparation\
 Myself - Modeling
 
-<br/><br/>
+<br/>
 
 ## B. Data
 \
