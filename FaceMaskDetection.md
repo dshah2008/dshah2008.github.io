@@ -82,7 +82,8 @@ There are 5 different versions of YOLOv5. The larger the model size, the more th
 
 ### Experimentation
 
-We conducted a comprehensive experimentation process. We can break it down into 3 phases:
+We conducted a comprehensive experimentation process. We can break it down into 3 phases:\
+\
 A.	Evaluation of an existing solution using FaceNet for Localization and MobileNetV2 for Classification. It produced unsatisfactory results on the test dataset.\
 B.	Implementing Yolov5 on our existing dataset, experimenting with the architecture and tuning a few key hyperparameters. This improved our results.\
 C.	Generating new data and appending it to our dataset. Further experimentation with architecture and complete hyperparameter tuning. The additional data helped produce another significant improvement in the results, beating all our benchmark scores.\
