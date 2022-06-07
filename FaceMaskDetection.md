@@ -123,11 +123,11 @@ For this project, we observe 2 mAP values:\
 
 The final model was tested on an independent dataset with 136 images.\
 \
-mAP scores:\
+**mAP score**\
 \
 <img src="images/result_map1.png?raw=true"/>
 
-Confusion Matrix:\
+**Confusion Matrix**\
 \
 <img src="images/result_cm1.png?raw=true"/>
 
