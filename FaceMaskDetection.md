@@ -95,32 +95,64 @@ In phase 2 and 3, we carried out further experiments to help determine the best 
 \-	Complete hyperparameter tuning using the evolve function\
 \-	Increase epochs
 
+### Evaluation Metrics
+In order to evaluate our models, we have examined two metrics:\
+\- mAP: mean-Average Precision\
+\- Validation loss (cls, obj, bbox)\
+\
+**mAP** or mean Average Precision is one of the commonly used performance metrics in Object Detection. It measures the average Precision over all Recall values using the Precision-Recall curve, followed by computing the mean of Average Precisions over all classes.\
+\
+To determine correct predictions, the IoU score is used (Intersection-over-Union), which is simply the percentage of overlap between the actual and predicted bounding box. The mAP uses a specific IoU threshold, eg. 0.5. Thus, for a True Positive, the prediction must have an IoU > threshold.\
+\
+mAP is also appropriate for our problem because the classes are imbalanced and we’re not interested in how many times the model correctly detects the background of an image (True Negatives). We only care about correctly detecting the mask.\
+\
+For this project, we observe 2 mAP values:\
+\-	mAP(0.5): Computes the mAP for a 0.5 IoU threshold\
+\-	mAP(0.5-0.95): Computes the average mAP over 10 IoU thresholds from 0.5 to 0.95.\
+\
+**Validation Loss (Cls, Obj, Bbox)**\
+\-	Bbox loss: Measures IoU loss of the actual and predicted bounding boxes\
+\-	Cls loss: Measures the classification error of each predicted bounding box\
+\-	Obj loss: Measures the confidence of identifying an object
+
 <br/>
 
-## D. Results
+## D. Results, Deployment & Next Steps
 
 ### Results
 
-|     Model     | Train MSE | Train MAE | Test MSE | Test MAE |
-| ------------- | --------- | --------- | -------- | -------- |
-| Random Forest |  0.0049   |  0.0548   |  0.0350  |  0.1475  |
-|     LSTM      |  0.0115   |  0.0859   |  0.0108  |  0.0817  |
-
-<br/>
-
-While the Random Forest has a lower Training error, it does overfit. On the unseen Test data, the LSTM model performs significantly better based on both Mean Squared Error and Mean Absolute Error.\
+The final model was tested on an independent dataset with 136 images.\
 \
+<img src="images/model_versions1.png?raw=true"/>
+
+<img src="images/model_versions1.png?raw=true"/>
+
+Based on the mAP table above, at a localization of 0.5 IoU, our model produces a high mAP of 89%. If we opt for very accurate localization, the mAP drops to 60%. However, for this business problem, an IoU of 0.5 is sufficient.\
 \
-Following is a comparison of actual and predicted values for the LSTM (most recent gameweek for 50 players).\
+Our model is very accurate with its ‘With Mask’ predictions. However, for ‘No Mask’, it has a low Recall. If we look at the Confusion Matrix, a significant number of ‘No Mask’ faces are not identified in the image and simply treated as background. The key reason behind such misclassification is the limited number of training images containing ‘No Mask’ faces as well as only background images.\
 \
-<img src="images/results1.png?raw=true"/>
+We further examine the Validation loss shown below to ensure our model robustness. At 100 epochs, our model is stable in terms of both localization and classification.\
+\
+<img src="images/model_versions1.png?raw=true"/>
 
+The model also performs well on Video footage. The attached notebook demonstrates this on a sample 60 second video clip. Below is a sample of predictions on the test images.\
+\
+<img src="images/model_versions1.png?raw=true"/>
 
-### Next Steps
+### Next Steps - Deployment
 
-\- Forecast next 5 timesteps for each player instead of the single average prediction\
-\- Additional data and features: Opponent history, team formations, player position breakdown, injury news\
-\- Improve encoding: use rolling average of points to encode *team* and *opponent* instead of just previous season totals\
-\- Remove data filters\
-\- Experiment with more models: LSTM with Attention head, Transformers, Neural Prophet
+Our next step would be to work towards Deploying the model in a production environment in a real corporate office setting. In order to ensure best possible performance and scalability, our recommendation would be to deploy our model on the cloud using Microsoft Azure services. Azure provides several affordable solutions for deploying and maintaining models in production.\
+\
+One such option is to use the Azure Video Analyzer service, allowing users to connect cameras directly to the cloud. This will eliminate the need for edge devices. The connection could be made via a remote device adapter. Following is a detailed architecture.\
+\
+<img src="images/model_versions1.png?raw=true"/>
+
+Once the model is deployed, ML-Ops services on Azure can be used to maintain and monitor the performance of models in production.
+
+### Next Steps - Model Improvement
+
+For our model to be production-ready, the following improvements would need to be made:\
+\-	Include additional data on ‘Incorrectly-worn mask’ faces and convert the solution to a 3-class problem\
+\-	Add data for ‘No Mask’ and background to improve its Recall as explained in the Results section\
+\-	Improve racial diversity of data
 
