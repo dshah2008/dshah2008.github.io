@@ -10,7 +10,7 @@
 ## A. Overview 
 \
 **Use Case** \
-Classify the water pumps at various locations in Tanzania as one of 3 classes:
+Classify the water pumps at various locations in Tanzania as one of 3 classes:\
 \- Functional\
 \- Non-functional\ 
 \- Functional but needs repair\ 
