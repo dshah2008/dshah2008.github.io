@@ -12,8 +12,8 @@
 **Use Case** \
 Classify the water pumps at various locations in Tanzania as one of 3 classes:\
 \- Functional\
-\- Non-functional\ 
-\- Functional but needs repair\ 
+\- Non-functional\
+\- Functional but needs repair\
 \
 **Objective** \
 The main objective is to learn how to tackle a Machine Learning Classification problem with a large number of categorical features. In addition, I'm looking to improve my modeling skills by using sklearn pipelines with custom transformers, as well as using Optuna for hyperparameter tuning. I have also implemented a novel technique for detecting class-based outliers.\
