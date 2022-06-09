@@ -24,7 +24,7 @@ This project is based on a practice competition hosted by *DrivenData*, a crowds
 About 25 million people in Tanzania do not have access to clean drinking water. This has led to a widespread increase in waterborne diseases all across the country and a serious health crisis. As the government struggles to find solutions, our project aims to use predictive analytics to identify the Functional, Non-Functional and Functional-but-needs-repair waterpoints to help them optimally allocate water resources and maintain water pumps.\
 \
 **Contributions** \
-I'm the sole contributor in this project. All the code in this repository has been developed only by me.
+I'm the sole contributor in this project.
 
 <br/>
 
