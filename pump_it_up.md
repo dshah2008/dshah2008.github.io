@@ -36,7 +36,7 @@ The data is provided by *DrivenData* in 3 files: *Train_X.csv, Train_Y.csv, Test
 \- Classes: 3\
 \- Total features: 39 (geography, construction type, water source and quality, etc.)\
 \- Categorical features: 28\
-
+\
 **Key Observations**\
 \
 \- 9 features are redundant (similar to other features)\
