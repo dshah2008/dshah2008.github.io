@@ -14,7 +14,7 @@
 <img src="images/footballplayer1.jpg?raw=true"/>
 
 ---
-[Faulty Water Pump Classification (click here to view)](http://example.com/)
+[Faulty Water Pump Classification (click here to view)](/pump_it_up.md)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
