@@ -56,7 +56,7 @@ Data has been aggregated from the following source tables (total of 241 files):\
 \- Target is very sparse (has many 0s)\
 <img src="images/Points distribution (before filter)1.JPG?raw=true"/>\
 \
-\- Target (after 0-50 filter) is right skewed\
+\- Target (after 0-50 filter)\
 <img src="images/Points distribution (after filter)1.JPG?raw=true"/>\
 \
 \
