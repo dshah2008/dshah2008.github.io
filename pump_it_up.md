@@ -30,7 +30,7 @@ Some of the data exploration was performed with the help of Ting Lan at Queen's 
 
 ## B. Data
 \
-The data is provided by *DrivenData* in 3 files: *Train_X.csv, Train_Y.csv, Test_X.csv.*\
+The data is provided by DrivenData in 3 files: Train_X.csv, Train_Y.csv, Test_X.csv.\
 \
 \- Training data sample size: 59,400\
 \- Classes: 3\
