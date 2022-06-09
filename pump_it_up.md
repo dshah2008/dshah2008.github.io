@@ -18,13 +18,13 @@ Classify the water pumps at various locations in Tanzania as one of 3 classes:\
 **Objective** \
 The main objective is to learn how to tackle a Machine Learning Classification problem with a large number of categorical features. In addition, I'm looking to improve my modeling skills by using sklearn pipelines with custom transformers, as well as using Optuna for hyperparameter tuning. I have also implemented a novel technique for detecting class-based outliers.\
 \
-This project is based on a practice competition hosted by *DrivenData*, a crowdsourcing platform that helps tackle social issues with the help of the Data Science community. The project is also part of my Machine Learning course in the Queen's MMAI program.\
+This project is based on a practice competition hosted by *DrivenData*, a crowdsourcing platform that helps tackle social issues with the help of the Data Science community. Part of this project was implemented in the Machine Learning course I had taken at Queen's University.\
 \
 **Business Problem** \
 About 25 million people in Tanzania do not have access to clean drinking water. This has led to a widespread increase in waterborne diseases all across the country and a serious health crisis. As the government struggles to find solutions, our project aims to use predictive analytics to identify the Functional, Non-Functional and Functional-but-needs-repair waterpoints to help them optimally allocate water resources and maintain water pumps.\
 \
 **Contributions** \
-I'm the sole contributor in this project.
+Some of the data exploration was performed with the help of Ting Lan at Queen's University. However, all the code displayed in this repository has been developed only by me.
 
 <br/>
 
