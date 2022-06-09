@@ -91,7 +91,6 @@ Boosting trees are mostly robust to outliers. However, class-based outliers can 
 
 I have implemented a function that first calls the sklearn.neighbors package to determine the k nearest neighbors for each data point. I then calculate what proportion of neighbors have a different class label. If this is greater than a certain threshold (in our case 85%), the given data point is flagged as an outlier and removed from the training data. This resulted in a significant increase in test accuracy.\
 \
-
 **Modeling and Evaluation**\
 \
 Due to the success of tree-based models on structured datasets with categorical features, we experimented exclusively with Random Forest, LightGBM and CatBoost. LightGBM and CatBoost produced the best results, and were particularly useful because of their inbuilt capability of handling missing values and categorical features. The code in the repository only contains the LightGBM implementation, as the other two models were implemented by my teammates as mentioned in Contributions.\
