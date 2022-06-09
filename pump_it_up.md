@@ -30,14 +30,21 @@ I'm the sole contributor in this project. All the code in this repository has be
 
 ## B. Data
 \
-Two data sources were used:\
+The data is provided by *DrivenData* in 3 files: *Train_X.csv, Train_Y.csv, Test_X.csv.*\
 \
-A. Data from Kaggle containing 853 images. The images capture different public scenarios in which people are either wearing a mask (correctly or incorrectly) or not wearing a mask. [View Dataset link](https://www.kaggle.com/datasets/andrewmvd/face-mask-detection)\
-B. Additional data containing 54 images from random online searches that focused on images of faces without masks and from side angles.\
+\- Training data sample size: 59,400\
+\- Classes: 3\
+\- Total features: 39 (geography, construction type, water source and quality, etc.)\
+\- Categorical features: 28\
+
+**Key Observations**\
 \
-Additional data was incorporated since data from the source A was heavily biased towards faces with masks only. It also did not contain enough samples with faces at different angles.\
+\- 9 features are redundant (similar to other features)\
+\- 7 have missing values\
 \
-<img src="images/class_dist1.png?raw=true"/>
+\-
+
+
 
 <br/>
 
