@@ -42,7 +42,7 @@ The data is provided by *DrivenData* in 3 files: *Train_X.csv, Train_Y.csv, Test
 \- 9 features are redundant (similar to other features)\
 \- 7 have missing values\
 \
-\Examining the class-conditional distribution of features helps us identify the important ones.\
+Examining the class-conditional distribution of features helps us identify the important ones.\
 \
 \- The proportion of non-functional pumps decreases almost linearly over time based on the construction year\
 \
