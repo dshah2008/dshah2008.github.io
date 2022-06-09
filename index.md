@@ -15,10 +15,12 @@
 
 ---
 [Faulty Water Pump Classification (click here to view)](/pump_it_up.md)
+
 <img src="images/pump_cover.JPG?raw=true"/>
 
 ---
 [Face Mask Detection with Yolov5 (click here to view)](/FaceMaskDetection.md)
+
 <img src="images/facemask-covid19.JPG?raw=true"/>
 
 ---
