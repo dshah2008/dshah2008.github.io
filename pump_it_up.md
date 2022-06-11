@@ -101,13 +101,13 @@ The models results were evaluated by DrivenData using classification accuracy. W
 
 ## D. Results & Business Impact
 
-**Results**\
+**Results**
 
 |     Model     | CV Accuracy | Test Accuracy |
 | ------------- | ----------- | ------------- |
-| Random Forest |   0.7942    |    0.7835     |
-|   CatBoost    |   0.0115    |    0.8146     |
-|   LightGBM    |   0.0115    |    0.8170     |
+| Random Forest |   0.7942    |    0.7875     |
+|   CatBoost    |   0.8195    |    0.8146     |
+|   LightGBM    |   0.8213    |    0.8170     |
 
 <br/>
 
@@ -125,8 +125,17 @@ The Recall of the Non-Functional class is also not so high. This indicates high 
 \
 On the other hand, the Functional class has very high Recall. It has fewer False Negatives than False Positives, which means that very few Functional pumps are being predicted as Non-Functional.\
 \
-If we were to prioritize the business objective over the competition scores, we would focus on improving the Non-Functional Recall and Functional Precision. This is because predicting Non-Functional pumps as Functional is very costly in terms of health hazards. This is explained in the next Business Impact section.\
+If we were to prioritize the business objective over the competition scores, we would focus on improving the Non-Functional Recall and Functional Precision. This is because predicting Non-Functional pumps as Functional is very costly in terms of health hazards. This is explained in the Business Impact section.\
 \
 **Business Impact**\
+\
+Although there is no scope for our model to be actually used by the Tanzanian Government, we have analyzed its business impact for our own learning.\
+\
+As of today, the government does not have enough resources to inspect every waterpoint in the country. With the help of our predictions, the Functional waterpoints can be identified and used to improve water allocation across communities. The Non-Functional waterpoints can be removed so that people do not have to consume unclean and harmful water. For the Functional-Needs-Repair waterpoints which constitute just 7% of the total, if correctly identified, maintenance and repair can easily be arranged.\
+\
+Improving water access with our predictions could have a massive impact financially and on people's health. It is esimtated that 43% of Tanzanians do not have access to safe drinking water. 23,900 children under the age of 5 also die every year due to water-borne diseases. 70% of the Tanzania Govt health budget (~700 million USD) is spent on diseases linked to lack of clean water and sanitation.\
+\
+Based on these figures and a few assumptions, we estimate that each Non-Functional or FNR waterpoint predicted as Functional would cost 6200 USD in terms of healthcare and medical infrastructure costs, as well as 0.7 lives of infants. Each Functional waterpoint predicted as NF or FNR would result in additional inspection and labor cost of 200 USD. These estimates help us map the costs to our confusion matrix.\
+\
 
 
