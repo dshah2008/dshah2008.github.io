@@ -49,7 +49,7 @@ Examining the class-conditional distribution of features helps us identify the i
 \
 \- The proportion of non-functional pumps decreases almost linearly over time based on the construction year\
 \
-<img src="images/const_year1.JPG?raw=true"/>
+<img src="images/const_year1.PNG?raw=true"/>
 
 \
 \- Overall, the 3 classes seem to be similarly distributed across the country. However, the *functional but needs repair* pumps seem to be located slightly more North-West based on the median latitude and longitude shown in the right-most graph.\
@@ -59,17 +59,17 @@ Examining the class-conditional distribution of features helps us identify the i
 \
 \- If we observe specific regions, the distribution varies significantly. In Mtwara and Lindi non-functional waterpoints account for more than 60% of the total whereas in Iringa and Arusha they are less than 30%.\
 \
-<img src="images/region1.JPG?raw=true"/>
+<img src="images/region1.PNG?raw=true"/>
 
 \
 \- The proportion of non-functional pumps decreases with increase in height\
 \
-<img src="images/gps_height1.JPG?raw=true"/>
+<img src="images/gps_height1.PNG?raw=true"/>
 
 \
 \- Waterpoints with a source in lakes or dams are far more likely to be non-functional than those getting water from rivers and springs.\
 \
-<img src="images/water_source1.JPG?raw=true"/>
+<img src="images/water_source1.PNG?raw=true"/>
 
 <br/>
 
