@@ -93,22 +93,40 @@ I have implemented a function that first calls the sklearn.neighbors package to 
 \
 **Modeling and Evaluation**\
 \
-Due to the success of tree-based models on structured datasets with categorical features, we experimented exclusively with Random Forest, LightGBM and CatBoost. LightGBM and CatBoost produced the best results, and were particularly useful because of their inbuilt capability of handling missing values and categorical features. The code in the repository only contains the LightGBM implementation, as the other two models were implemented by my teammates as mentioned in Contributions.\
+Due to the general success of tree-based models on structured datasets with categorical features, we experimented exclusively with Random Forest, LightGBM and CatBoost. LightGBM and CatBoost produced the best results, and were particularly useful because of their inbuilt capability of handling missing values and categorical features. The code in the repository only contains the LightGBM implementation, as the other two models were implemented by my teammates as mentioned in Contributions.\
 \
-The models results were evaluated by DrivenData using standard classification accuracy. We also used 10-fold cross-validation to tune and evaluate the models before submission. Tuning was done with the help of Optuna's MedianPruner. A further Grid Search was also carried out based on the best results from Optuna.
+The models results were evaluated by DrivenData using classification accuracy. We also used 10-fold cross-validation to tune and evaluate the models before submission. Tuning was done with the help of Optuna's MedianPruner. A further Grid Search was also carried out based on the best results from Optuna.
 
 <br/>
 
 ## D. Results & Business Impact
 
-The final model was tested on an independent dataset with 136 images.\
+**Results**\
+
+|     Model     | CV Accuracy | Test Accuracy |
+| ------------- | ----------- | ------------- |
+| Random Forest |   0.7942    |    0.7835     |
+|   CatBoost    |   0.0115    |    0.8146     |
+|   LightGBM    |   0.0115    |    0.8170     |
+
+<br/>
+
+**Classification Report**\
 \
-**mAP score**\
-\
-<img src="images/result_map1.png?raw=true"/>
+<img src="images/result_cm1.png?raw=true"/>
 
 **Confusion Matrix**\
 \
 <img src="images/result_cm1.png?raw=true"/>
+
+While the model performs well overall, it struggles with the minority Functional-Needs-Repair class. This is mainly because of less data available for the class. While under-sampling and over-sampling techniques could help improve performance, it was not prioritized as our only objective for the competition is the overall accuracy and not the macro average.\
+\
+The Recall of the Non-Functional class is also not so high. This indicates high False Negatives for the class and from the confusion matrix, we can further validate that a significant proportion of Non-Functional pumps are being predicted as Functional.\
+\
+On the other hand, the Functional class has very high Recall. It has fewer False Negatives than False Positives, which means that very few Functional pumps are being predicted as Non-Functional.\
+\
+If we were to prioritize the business objective over the competition scores, we would focus on improving the Non-Functional Recall and Functional Precision. This is because predicting Non-Functional pumps as Functional is very costly in terms of health hazards. This is explained in the next Business Impact section.\
+\
+**Business Impact**\
 
 
