@@ -43,7 +43,7 @@ The data is provided by DrivenData in 3 files: Train_X.csv, Train_Y.csv, Test_X.
 \- 7 have missing values\
 \- Class are imbalanced\
 \
-<img src="images/pump_class.PNG?raw=true"/>
+<img src="images/pump_class.png?raw=true"/>
 \
 Examining the class-conditional distribution of features helps us identify the important ones.\
 \
