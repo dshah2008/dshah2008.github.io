@@ -41,6 +41,9 @@ The data is provided by DrivenData in 3 files: Train_X.csv, Train_Y.csv, Test_X.
 \
 \- 9 features are redundant (similar to other features)\
 \- 7 have missing values\
+\- Class are imbalanced\
+\
+<img src="images/pump_class1.PNG?raw=true"/>
 \
 Examining the class-conditional distribution of features helps us identify the important ones.\
 \
