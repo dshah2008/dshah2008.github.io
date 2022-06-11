@@ -113,11 +113,11 @@ The models results were evaluated by DrivenData using classification accuracy. W
 
 **Classification Report**\
 \
-<img src="images/result_cm1.png?raw=true"/>
+<img src="images/accuracy_report1.PNG?raw=true"/>
 
 **Confusion Matrix**\
 \
-<img src="images/result_cm1.png?raw=true"/>
+<img src="images/CM.png?raw=true"/>
 
 While the model performs well overall, it struggles with the minority Functional-Needs-Repair class. This is mainly because of less data available for the class. While under-sampling and over-sampling techniques could help improve performance, it was not prioritized as our only objective for the competition is the overall accuracy and not the macro average.\
 \
@@ -137,5 +137,6 @@ Improving water access with our predictions could have a massive impact financia
 \
 Based on these figures and a few assumptions, we estimate that each Non-Functional or FNR waterpoint predicted as Functional would cost 6200 USD in terms of healthcare and medical infrastructure costs, as well as 0.7 lives of infants. Each Functional waterpoint predicted as NF or FNR would result in additional inspection and labor cost of 200 USD. These estimates help us map the costs to our confusion matrix.\
 \
+<img src="images/financials1.PNG?raw=true"/>
 
 
