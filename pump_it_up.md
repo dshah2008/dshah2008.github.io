@@ -46,7 +46,7 @@ The data is provided by DrivenData in 3 files: Train_X.csv, Train_Y.csv, Test_X.
 <img src="images/pump_class.png?raw=true"/>
 \
 \
-Examining the class-conditional distribution of features helps us identify the important ones.\
+Further examination of the class-conditional distribution of features helps us identify the important ones.\
 \
 \- The proportion of non-functional pumps decreases almost linearly over time based on the construction year\
 \
