@@ -10,15 +10,13 @@
 ## A. Overview 
 \
 **Use Case** \
-The data consists of messages from customers, requesting support from a bank related to banks accounts, transactions, credit cards, etc. Each message needs to be classified into one of 77 classes. The classes include topics such as *request_refund*, *cancel_transfer* and *exchange_charge*.\
+The data consists of messages from customers, requesting banking support related to personal accounts, transactions, credit cards, etc. Each message needs to be classified into one of 77 classes. The classes include topics such as *request_refund*, *cancel_transfer* and *exchange_charge*.\
 \
 **Objective** \
-The objective is to learn how to tackle an NLP Classification problem with a large number of classes. Both Machine Learning and Deep Learning models are used.\
-\
-Part of this project was implemented in the Natural Language Processing course I had taken at Queen's University.\
+Learn how to solve an NLP Classification problem with a large number of classes, using both shallow Machine Learning and Deep Learning models.\
 \
 **Contributions** \
-I'm the sole contributor in this project. All code in the repository has been developed only by me.
+I'm the sole contributor in this project. It was first implemented by me as part of the Natural Language Processing course I had taken at Queen's University.
 
 <br/>
 
@@ -51,13 +49,27 @@ All data is contained in a single files: public_data.csv.\
 
 <br/>
 
-## C. Implementation
-
-**Data Cleaning**\
-\- Drop redundant columns that are similar to other features\
-\- Change 0 construction year to NaN as missing values are handled internally by boosting trees\
-\- Standardize spellings in the installer feature so that there are no redundant categories\
+## C. Design & Implementation
 \
+Three models were implemented in this project:\
+\
+**LightGBM with Tf-Idf**\
+\
+\- A shallow model using LightGBM with Tf-Idf vectors as features\
+\
+
+**LightGBM with SBERT**\
+\
+\- A hybrid model using LightGBM using SBERT or BERT Sentence Transformer\
+\
+
+**DistilBERT**\
+\
+\- A Deep Learning DistilBERT Transformer model trained from scratch\
+\
+
+
+
 **Feature Engineering**\
 \- Create *month_recorded* as a feature from date_recorded\
 \- Extract days since start of time from date_recorded\
