@@ -55,17 +55,17 @@ Three models were implemented in this project:\
 \
 **LightGBM with Tf-Idf**\
 \
-\A shallow model using LightGBM with Tf-Idf vectors as features.\
+A shallow model using LightGBM with Tf-Idf vectors as features.\
 \
 \
 
 **LightGBM with SBERT**\
 \
-\A hybrid model using LightGBM and SBERT or BERT Sentence Transformer.\
+A hybrid model using LightGBM and SBERT or BERT Sentence Transformer.\
 \
-\SBERT was developed in 2019 as a modification of the pre-trained BERT with signficant reduction in computation time. It outputs meaningful sentence embeddings in a 768 dimension vector. These embeddings can then be used as features in any Machine Learning model.\
+SBERT was developed in 2019 as a modification of the pre-trained BERT with signficant reduction in computation time. It outputs meaningful sentence embeddings in a 768 dimension vector. These embeddings can then be used as features in any Machine Learning model.\
 \
-\After encoding the text samples with SBERT, we perform Recursive Feature Elimination to identify the most significant features based on the feature importance scores outputed by LightGBM. Once the top N features are selected, the model is once again trained to produce the classification.\
+After encoding the text samples with SBERT, we perform Recursive Feature Elimination to identify the most significant features based on the feature importance scores outputed by LightGBM. Once the top N features are selected, the model is once again trained to produce the classification.\
 \
 We tune the model hyperparamters, including the N no. of features value using Optuna's Median Pruner. Tuning is based on 5-fold cross-validation and the log loss metric.\
 \
