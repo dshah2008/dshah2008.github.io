@@ -27,7 +27,7 @@ The data originates from a real-world banking dataset but has been open-sourced 
 All data is contained in a single files: public_data.csv.\
 \
 \- Training data sample size: 10,466\
-\- Classes: 77
+\- Classes: 77\
 \
 **Key Observations**\
 \
