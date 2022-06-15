@@ -16,7 +16,7 @@ The data consists of messages from customers, requesting banking support related
 Learn how to solve an NLP Classification problem with a large number of classes, using both shallow Machine Learning and Deep Learning models.\
 \
 **Contributions** \
-I'm the sole contributor in this project. It was first implemented by me as part of the Natural Language Processing course I had taken at Queen's University.
+I'm the sole contributor in this project. It was first implemented by me as part of the Natural Language Processing course I had taken at Queen's University.\
 <br/>
 
 ## B. Data
