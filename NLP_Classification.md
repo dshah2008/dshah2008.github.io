@@ -17,8 +17,8 @@ Learn how to solve an NLP Classification problem with a large number of classes,
 \
 **Contributions** \
 I'm the sole contributor in this project. It was first implemented by me as part of the Natural Language Processing course I had taken at Queen's University.
-
 <br/>
+
 ## B. Data
 \
 The data originates from a real-world banking dataset but has been open-sourced for use in Academia. It was provided by Dr. Stephen Thomas of Queen's University as part of a class project.\
