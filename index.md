@@ -2,7 +2,7 @@
 
 ---
 
-### Personal Projects
+### Academic Projects
 
 [NLP Topic Classification in Banking (click here to view)](http://example.com/)
 
