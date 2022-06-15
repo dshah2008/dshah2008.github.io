@@ -57,9 +57,9 @@ Three models were implemented in this project:\
 A shallow model using LightGBM with Tf-Idf vectors as features.\
 \
 Tf-Idf helps create features from text samples by assigning a score to each word token/term that occurs in the corpus. For a set of terms and documents:\
-tf-idf(t, d) = tf(t, d) * idf(t)\
+**tf-idf(t, d) = tf(t, d) * idf(t)**\
 where tf is the frequency of term t in d\
-idf(t) = log (n / df(t)) + 1)\
+**idf(t) = log (n / df(t)) + 1)**\
 n is the total number of documents, df is the number of documents containing term t\
 \
 Prior to vectorization, we clean the text by converting it to lower case, removing stop words (from spacy) and removing all characters except the alphabet. We also tokenize the sentences into words using nltk. Note that vectorization is performed in a pipeline in order to avoid data leakage during validation and testing.\
