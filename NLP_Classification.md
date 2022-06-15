@@ -70,7 +70,7 @@ We tune the model hyperparamters, including the N no. of features value using Op
 <br/>
 
 ### 2. LightGBM with SBERT
-\
+
 A hybrid model using LightGBM and SBERT or BERT Sentence Transformer.\
 \
 SBERT was developed in 2019 as a modification of the pre-trained BERT with signficant reduction in computation time. It outputs meaningful sentence embeddings in a 768 dimension vector. These embeddings can then be used as features in any Machine Learning model.\
@@ -79,7 +79,7 @@ After encoding the text samples with SBERT, we perform feature selection and tra
 <br/>
 
 ### 3. DistilBERT
-\
+
 \- A Deep Learning DistilBERT Transformer model trained from scratch\
 \
 
