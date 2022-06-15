@@ -75,33 +75,21 @@ A hybrid model using LightGBM and SBERT or BERT Sentence Transformer.\
 \
 BERT (Bidirectional Encoder Representations from Transformers) was developed by Google in 2018 and was one of the most significant breakthrough in NLP. It was based on the original Tranformers paper, Vaswani et al. (2017). BERT is pre-trained on English Wikipedia and BooksCorpus for language modeling and next sentence prediction tasks. SBERT was developed in 2019 as a modification of the pre-trained BERT with signficant reduction in computation time. It outputs meaningful sentence embeddings in a 768 dimension vector. These embeddings can then be used as features in any Machine Learning model.\
 \
-SInce BERT is trained on standard English sentences in Wikipedia articles, no text processing is recommended prior to encoding. After encoding the text samples with SBERT, we perform feature selection and train, tune and evaluate the LightGBM model just as we had done with the Tf-Idf based model.\
+Since BERT is trained on standard English sentences in Wikipedia articles, no text processing is recommended prior to encoding. After encoding the text samples with SBERT, we perform feature selection and train, tune and evaluate the LightGBM model just as we had done with the Tf-Idf based model.\
 <br/>
 
 ### 3. DistilBERT
 
-A Deep Learning DistilBERT Transformer model fully trained on our dataset.\
+A Deep Learning DistilBERT Transformer model fine tuned on our dataset.\
 \
 DistilBERT is a compact version of the BERT Transformer with 40% fewer parameters. Despite the significant reduction in complexity, it retains most of BERT's language understanding power.\
 \
-We first encode the text using dbert_tokenizer
+I first used the model with zero-shot learning, using just the pre-trained weights with no training on our dataset. This did not yield good results. I then added a few trainable Dense layers and while this improved the performance, it was still unsatisfactory. Finally, since DistilBERT does not allow partial freezing of layers, I set all the layers to be trainable and fine-tuned the model on our dataset. Even without much hyperparameter tuning, the results were exceptional. The final model is the distilbert-base-uncased with an additional Dropout and Dense layer.\
+\
+Note that prior to training the model, we are required to tokenize the input sentences using the dbert_tokenizer. It generates an input_ids and attention_mask from the training sample, which can then be passed to DistilBert for training.\
+<br/>
 
-
-**Feature Engineering**\
-\- Create *month_recorded* as a feature from date_recorded\
-\- Extract days since start of time from date_recorded\
-\- Due to the high cardinality of several categorical features, we group the ones that have a low frequency and uninteresting class distribution into a single *Rare* category. These were identified using the PowerBI dashboard, and the grouping is done in code.\
-\- The categorical features are then encoded using both One-Hot-Encoding and LightGBM's default encoder.\
-\
-**Class-based Outlier Detection**\
-\
-Boosting trees are mostly robust to outliers. However, class-based outliers can cause them to overfit. It refers to data points whose large proportion of neighbors in the feature space belong to a different class.
-\
-<img src="images/class_outlier1.png?raw=true"/>
-
-I have implemented a function that first calls the sklearn.neighbors package to determine the k nearest neighbors for each data point. I then calculate what proportion of neighbors have a different class label. If this is greater than a certain threshold (in our case 85%), the given data point is flagged as an outlier and removed from the training data. This resulted in a significant increase in test accuracy.\
-\
-**Modeling and Evaluation**\
+**Evaluation**\
 \
 Due to the general success of tree-based models on structured datasets with categorical features, we experimented exclusively with Random Forest, LightGBM and CatBoost. LightGBM and CatBoost produced the best results, and were particularly useful because of their inbuilt capability of handling missing values and categorical features. The code in the repository only contains the LightGBM implementation, as the other two models were implemented by my teammates as mentioned in Contributions.\
 \
@@ -109,7 +97,7 @@ The models results were evaluated by DrivenData using classification accuracy. W
 
 <br/>
 
-## D. Results & Business Impact
+## D. Results
 
 **Results**
 
@@ -135,18 +123,6 @@ The Recall of the Non-Functional class is also not so high. This indicates high 
 \
 On the other hand, the Functional class has very high Recall. It has fewer False Negatives than False Positives, which means that very few Functional pumps are being predicted as Non-Functional.\
 \
-If we were to prioritize the business objective over the competition scores, we would focus on improving the Non-Functional Recall and Functional Precision. This is because predicting Non-Functional pumps as Functional is very costly in terms of health hazards. This is explained in the Business Impact section.\
-\
-**Business Impact**\
-\
-Although there is no scope for our model to be actually used by the Tanzanian Government, we have analyzed its business impact for our own learning.\
-\
-As of today, the government does not have enough resources to inspect every waterpoint in the country. With the help of our predictions, the Functional waterpoints can be identified and used to improve water allocation across communities. The Non-Functional waterpoints can be removed so that people do not have to consume unclean and harmful water. For the Functional-Needs-Repair waterpoints which constitute just 7% of the total, if correctly identified, maintenance and repair can easily be arranged.\
-\
-Improving water access with our predictions could have a massive impact financially and on people's health. It is esimtated that 43% of Tanzanians do not have access to safe drinking water. 23,900 children under the age of 5 also die every year due to water-borne diseases. 70% of the Tanzania Govt health budget (~700 million USD) is spent on diseases linked to lack of clean water and sanitation.\
-\
-Based on these figures and a few assumptions, we estimate that each Non-Functional or FNR waterpoint predicted as Functional would cost 6200 USD in terms of healthcare and medical infrastructure costs, as well as 0.7 lives of infants. Each Functional waterpoint predicted as NF or FNR would result in additional inspection and labor cost of 200 USD. These estimates help us map the costs to our confusion matrix.\
-\
-<img src="images/financials1.PNG?raw=true"/>
+If we were to prioritize the business objective over the competition scores, we would focus on improving the Non-Functional Recall and Functional Precision. This is because predicting Non-Functional pumps as Functional is very costly in terms of health hazards. This is explained in the Business Impact section.
 
 
