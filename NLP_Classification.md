@@ -73,16 +73,18 @@ We tune the model hyperparamters, including the N no. of features value using Op
 
 A hybrid model using LightGBM and SBERT or BERT Sentence Transformer.\
 \
-SBERT was developed in 2019 as a modification of the pre-trained BERT with signficant reduction in computation time. It outputs meaningful sentence embeddings in a 768 dimension vector. These embeddings can then be used as features in any Machine Learning model.\
+BERT (Bidirectional Encoder Representations from Transformers) was developed by Google in 2018 and was one of the most significant breakthrough in NLP. It was based on the original Tranformers paper, Vaswani et al. (2017). BERT is pre-trained on English Wikipedia and BooksCorpus for language modeling and next sentence prediction tasks. SBERT was developed in 2019 as a modification of the pre-trained BERT with signficant reduction in computation time. It outputs meaningful sentence embeddings in a 768 dimension vector. These embeddings can then be used as features in any Machine Learning model.\
 \
-After encoding the text samples with SBERT, we perform feature selection and train, tune and evaluate the LightGBM model just as we had done with the Tf-Idf based model.\
+SInce BERT is trained on standard English sentences in Wikipedia articles, no text processing is recommended prior to encoding. After encoding the text samples with SBERT, we perform feature selection and train, tune and evaluate the LightGBM model just as we had done with the Tf-Idf based model.\
 <br/>
 
 ### 3. DistilBERT
 
-\- A Deep Learning DistilBERT Transformer model trained from scratch\
+A Deep Learning DistilBERT Transformer model fully trained on our dataset.\
 \
-
+DistilBERT is a compact version of the BERT Transformer with 40% fewer parameters. Despite the significant reduction in complexity, it retains most of BERT's language understanding power.\
+\
+We first encode the text using dbert_tokenizer
 
 
 **Feature Engineering**\
