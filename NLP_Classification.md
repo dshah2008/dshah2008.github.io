@@ -51,9 +51,9 @@ All data is contained in a single files: public_data.csv.\
 ## C. Design & Implementation
 \
 Three models were implemented in this project:
-\
-#### 1. LightGBM with Tf-Idf
-\
+
+### 1. LightGBM with Tf-Idf
+
 A shallow model using LightGBM with Tf-Idf vectors as features.\
 \
 Tf-Idf helps create features from text samples by assigning a score to each word token/term that occurs in the corpus. For a set of terms and documents:\
@@ -69,7 +69,7 @@ After Tf-Idf scores are generated for each sample and each term, we perform Recu
 We tune the model hyperparamters, including the N no. of features value using Optuna's Median Pruner. Tuning is based on 5-fold cross-validation and the log loss metric.\
 <br/>
 
-#### 2. LightGBM with SBERT
+### 2. LightGBM with SBERT
 \
 A hybrid model using LightGBM and SBERT or BERT Sentence Transformer.\
 \
@@ -78,7 +78,7 @@ SBERT was developed in 2019 as a modification of the pre-trained BERT with signf
 After encoding the text samples with SBERT, we perform feature selection and train, tune and evaluate the LightGBM model just as we had done with the Tf-Idf based model.\
 <br/>
 
-#### 3. DistilBERT
+### 3. DistilBERT
 \
 \- A Deep Learning DistilBERT Transformer model trained from scratch\
 \
