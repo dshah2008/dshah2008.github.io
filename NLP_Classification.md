@@ -127,4 +127,8 @@ Further examination of the Precision and Recall scores paint a clearer picture o
 
 **Next Steps**\
 \
-\-
+While we're satisfied with the overall results, there are some improvements we could make if required by the business:\
+\- Tune the key hyperparameters of DistilBERT: learning rate, batch_size, epochs, weight_decay.\
+\- Experiment with transfer learning from bigger Transformer models like RoBERTa and XLNet, with partial freezing of layers.\
+\- Analyze the confusion matrix for weak performing classes, determine which classes are difficult to separate and inspect the training samples and key words that could cause the misclassification. Pre-processing steps could be specifically applied to these samples. We could also increase the weightage for weak-performing classes during validation.\
+\
