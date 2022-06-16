@@ -6,7 +6,7 @@
 
 [NLP Topic Classification in Banking (click here to view)](http://example.com/)
 
-<img src="images/nlp_cover.PNG?raw=true"/>
+<img src="images/nlp_cover1.PNG?raw=true"/>
 
 ---
 [Football Player Performance Prediction with LSTM (click here to view)](/FPL_prediction_main.md)
