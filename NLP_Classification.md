@@ -84,38 +84,33 @@ A Deep Learning DistilBERT Transformer model fine tuned on our dataset.\
 \
 DistilBERT is a compact version of the BERT Transformer with 40% fewer parameters. Despite the significant reduction in complexity, it retains most of BERT's language understanding power.\
 \
-I first used the model with zero-shot learning, using just the pre-trained weights with no training on our dataset. This did not yield good results. I then added a few trainable Dense layers and while this improved the performance, it was still unsatisfactory. Finally, since DistilBERT does not allow partial freezing of layers, I set all the layers to be trainable and fine-tuned the model on our dataset. Even without much hyperparameter tuning, the results were exceptional. The final model is the distilbert-base-uncased with an additional Dropout and Dense layer.\
+I first used the model with zero-shot learning, using just the pre-trained weights with no training on our dataset. This did not yield good results. I then added a few trainable Dense layers but performance was still unsatisfactory. Finally, when I set all the layers to be trainable and fine-tuned the model on our dataset, the results were exceptional, even without much hyperparameter tuning. The final model is the distilbert-base-uncased with an additional Dropout and Dense layer.\
 \
-Note that prior to training the model, we are required to tokenize the input sentences using the dbert_tokenizer. It generates an input_ids and attention_mask from the training sample, which can then be passed to DistilBert for training.\
+Note that prior to training the model, we are required to tokenize the input sentences using the dbert_tokenizer. It generates an input_ids and attention_mask from the training sample, which is then passed to DistilBert for training.\
 <br/>
 
 **Evaluation**\
 \
-Due to the general success of tree-based models on structured datasets with categorical features, we experimented exclusively with Random Forest, LightGBM and CatBoost. LightGBM and CatBoost produced the best results, and were particularly useful because of their inbuilt capability of handling missing values and categorical features. The code in the repository only contains the LightGBM implementation, as the other two models were implemented by my teammates as mentioned in Contributions.\
+The final model evaluation is done only based on overall Accuracy scores. Although the classes have a slight imbalance, we are not interested in a macro accuracy or F1-score because the weightage we want to give each class is directly proportional to the number of samples they contain. However, in a real business setting, we may want to assign higher weightage to a class like stolen card as compared to change address.\
 \
-The models results were evaluated by DrivenData using classification accuracy. We also used 10-fold cross-validation to tune and evaluate the models before submission. Tuning was done with the help of Optuna's MedianPruner. A further Grid Search was also carried out based on the best results from Optuna.
-
+For tuning hyperparamters, we evaluate the models with 5-fold cross validation based on log loss.
 <br/>
 
 ## D. Results
 
 **Results**
 
-|     Model     | CV Accuracy | Test Accuracy |
-| ------------- | ----------- | ------------- |
-| Random Forest |   0.7942    |    0.7875     |
-|   CatBoost    |   0.8195    |    0.8146     |
-|   LightGBM    |   0.8213    |    0.8170     |
+|     Model      | Train Accuracy | Test Accuracy |
+| -------------- | -------------- | ------------- |
+| LightGBM-TfIdf |     0.7942     |    0.7875     |
+| LightGBM-SBERT |     0.8195     |    0.8146     |
+|   DistilBERT   |     0.8213     |    0.8170     |
 
 <br/>
 
 **Classification Report**\
 \
 <img src="images/accuracy_report1.PNG?raw=true"/>
-
-**Confusion Matrix**\
-\
-<img src="images/CM.png?raw=true"/>
 
 While the model performs well overall, it struggles with the minority Functional-Needs-Repair class. This is mainly because of less data available for the class. While under-sampling and over-sampling techniques could help improve performance, it was not prioritized as our only objective for the competition is the overall accuracy and not the macro average.\
 \
