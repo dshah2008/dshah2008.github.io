@@ -110,7 +110,7 @@ As evident from the Test accuracy, the SBERT sentence encodings were a significa
 
 <br/>
 
-**Classification Report**\
+**Classification Report**
 \
 We can further interpret our model results by examining the Precision, Recall and F1-Scores for each class.\
 \
@@ -122,8 +122,8 @@ We can further interpret our model results by examining the Precision, Recall an
 Our model performs well on every class, with no F1-Score below 75%. Only 4 out of the 77 classes have an F1-Score of less than 80%. 'Topping_up_by_card' and 'pending_transfer' are the worst performing classes while 'apple_pay_or_google_pay' and 'top_up_limits' are two of the best performing classes.\
 \
 Further examination of the Precision and Recall scores paint a clearer picture of the model weaknesses. Based on the low Precision, the 'topping_up_by_card' class produces many false positives. This means that the model incorrectly classifies many samples as 'topping_up_by_card' when they actually belong to another class. Similarly, based on the low Recalls, the 'pending_transfer' and 'pending_top_up' suffer from high False Negatives. This indicates that samples belonging to these classes are incorrectly classified by other labels. We could further analyze what these incorrect labels are by studying the confusion matrix, but that is beyond our current scope and would be recommended for next steps.\
-\
 
-**Next Steps**\
+
+**Next Steps**
 
 \-
