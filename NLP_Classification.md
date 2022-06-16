@@ -28,6 +28,7 @@ All data is contained in a single file: public_data.csv.\
 \- Training data sample size: 10,466\
 \- Classes: 77\
 \
+\
 **Key Observations**\
 \
 \- 77 classes with observations per class ranging from 40 to 150.\
