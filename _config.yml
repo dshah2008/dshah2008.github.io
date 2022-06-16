@@ -6,8 +6,9 @@ description: > # your text below (remove <br> elements if you don't need line br
   <br><br>
   I'm currently a student at Queen's University in Canada, pursuing a Master's degree in Artificial Intelligence. 
   I'm based out of Toronto. Feel free to reach out to me on LinkedIn.
-  <br><br>
-  <a href="https://www.linkedin.com/in/dhrumelshah/">View My LinkedIn Profile</a> 
+  <br><br><br>
+  <a href="https://www.linkedin.com/in/dhrumelshah/">View My LinkedIn Profile</a>
+  <a href="https://github.com/dshah2008/">View My GitHub Repositories</a>
   
 theme: jekyll-theme-dinky
 google_analytics: UA-000000-0 # your Google Analytics tracking ID here
