@@ -96,28 +96,34 @@ The final model evaluation is done only based on overall Accuracy scores. Althou
 For tuning hyperparamters, we evaluate the models with 5-fold cross validation based on log loss.
 <br/>
 
-## D. Results
+## D. Results and Next Steps
 
 **Results**
 
 |     Model      | Train Accuracy | Test Accuracy |
 | -------------- | -------------- | ------------- |
-| LightGBM-TfIdf |     0.7942     |    0.7875     |
-| LightGBM-SBERT |     0.8195     |    0.8146     |
-|   DistilBERT   |     0.8213     |    0.8170     |
+| LightGBM-TfIdf |     0.9446     |    0.7139     |
+| LightGBM-SBERT |     0.9731     |    0.8128     |
+|   DistilBERT   |     0.9933     |    0.9174     |
+
+As evident from the Test accuracy, the SBERT sentence encodings were a significant improvement on the Tf-Idf vectorizer as features for the LightGBM model. However, both models were comfortably outperformed by DistilBERT. DistilBERT was also the easiest model to implement as no feature engineering or hyperparameter tuning was required. This experiment further validates the power of Transformer models in the NLP domain.
 
 <br/>
 
 **Classification Report**\
 \
+We can further interpret our model results by examining the Precision, Recall and F1-Scores for each class.\
+\
 <img src="images/accuracy_report1.PNG?raw=true"/>
 
-While the model performs well overall, it struggles with the minority Functional-Needs-Repair class. This is mainly because of less data available for the class. While under-sampling and over-sampling techniques could help improve performance, it was not prioritized as our only objective for the competition is the overall accuracy and not the macro average.\
-\
-The Recall of the Non-Functional class is also not so high. This indicates high False Negatives for the class and from the confusion matrix, we can further validate that a significant proportion of Non-Functional pumps are being predicted as Functional.\
-\
-On the other hand, the Functional class has very high Recall. It has fewer False Negatives than False Positives, which means that very few Functional pumps are being predicted as Non-Functional.\
-\
-If we were to prioritize the business objective over the competition scores, we would focus on improving the Non-Functional Recall and Functional Precision. This is because predicting Non-Functional pumps as Functional is very costly in terms of health hazards. This is explained in the Business Impact section.
+<img src="images/accuracy_report1.PNG?raw=true"/>
 
 
+Our model performs well on every class, with no F1-Score below 75%. Only 4 out of the 77 classes have an F1-Score of less than 80%. 'Topping_up_by_card' and 'pending_transfer' are the worst performing classes while 'apple_pay_or_google_pay' and 'top_up_limits' are two of the best performing classes.\
+\
+Further examination of the Precision and Recall scores paint a clearer picture of the model weaknesses. Based on the low Precision, the 'topping_up_by_card' class produces many false positives. This means that the model incorrectly classifies many samples as 'topping_up_by_card' when they actually belong to another class. Similarly, based on the low Recalls, the 'pending_transfer' and 'pending_top_up' suffer from high False Negatives. This indicates that samples belonging to these classes are incorrectly classified by other labels. We could further analyze what these incorrect labels are by studying the confusion matrix, but that is beyond our current scope and would be recommended for next steps.\
+\
+
+**Next Steps**\
+
+\-
