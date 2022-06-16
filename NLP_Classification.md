@@ -32,12 +32,12 @@ All data is contained in a single files: public_data.csv.\
 \
 \- 77 classes with observations per class ranging from 40 to 150.\
 \
-<img src="images/pump_class.png?raw=true"/>
+<img src="images/nlp_classdist1.png?raw=true"/>
 \
 \
 \- Most messages are short, containing 3 to 15 words.\
 \
-<img src="images/pump_class.png?raw=true"/>
+<img src="images/nlp_wordcount.png?raw=true"/>
 \
 \
 \- Card, Account, Transfer and Exchange are some of the most frequently occuring non-stop words.\
