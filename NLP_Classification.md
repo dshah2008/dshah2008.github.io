@@ -131,7 +131,8 @@ While we're satisfied with the overall results, there are some improvements we c
 \
 \- Tune the key hyperparameters of DistilBERT: learning rate, batch_size, epochs, weight_decay.\
 \- Experiment with transfer learning from bigger Transformer models like RoBERTa and XLNet, with partial freezing of layers.\
-\- Analyze the confusion matrix for weak performing classes, determine which classes are difficult to separate and inspect the training samples and key words that could cause the misclassification. Pre-processing steps could be specifically applied to these samples. We could also increase the weightage for weak-performing classes during validation.
+\- Analyze the confusion matrix for weak performing classes, determine which classes are difficult to separate and inspect the training samples and key words that could cause the misclassification. Pre-processing steps could be specifically applied to these samples. We could also increase the weightage for weak-performing classes during validation.\
+\- Experiment with FinBERT, a BERT model futher pre-trained on a Finance corpus.
 
 <br/>
 
