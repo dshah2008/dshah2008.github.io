@@ -95,7 +95,7 @@ The best model is chosen based on Classification Accuracy scores on test data. A
 
 <br/>
 
-## D. Results and Next Steps
+## D. Results and Improvements
 \
 \
 **Results**
@@ -125,7 +125,7 @@ Further examination of the Precision and Recall scores paint a clearer picture o
 
 <br/>
 
-**Next Steps**\
+**Improvements**\
 \
 While we're satisfied with the overall results, there are some improvements we could make if required by the business:\
 \
