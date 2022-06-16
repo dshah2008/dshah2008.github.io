@@ -118,9 +118,9 @@ As evident from the Test accuracy, the SBERT sentence encodings were a significa
 \
 We can further interpret our model results by examining the Precision, Recall and F1-Scores for each class.\
 \
-<img src="images/accuracy_report1.PNG?raw=true"/>
+<img src="images/nlp_highf1.PNG?raw=true"/>
 
-<img src="images/accuracy_report1.PNG?raw=true"/>
+<img src="images/nlp_lowf1.PNG?raw=true"/>
 
 
 Our model performs well on every class, with no F1-Score below 75%. Only 4 out of the 77 classes have an F1-Score of less than 80%. 'Topping_up_by_card' and 'pending_transfer' are the worst performing classes while 'apple_pay_or_google_pay' and 'top_up_limits' are two of the best performing classes.\
