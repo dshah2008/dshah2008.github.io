@@ -23,7 +23,7 @@ I'm the sole contributor in this project. It was first implemented by me as part
 \
 The data originates from a real-world banking dataset but has been open-sourced for use in Academia. It was provided by Dr. Stephen Thomas of Queen's University as part of a class project.\
 \
-All data is contained in a single file: public_data.csv.\
+All data is contained in a single file: *public_data.csv*\
 \
 \- Training data sample size: 10,466\
 \- Classes: 77\
