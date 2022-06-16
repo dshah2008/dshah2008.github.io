@@ -94,6 +94,7 @@ Note that prior to training the model, we are required to tokenize the input sen
 The final model evaluation is done only based on overall Accuracy scores. Although the classes have a slight imbalance, we are not interested in a macro accuracy or F1-score because the weightage we want to give each class is directly proportional to the number of samples they contain. However, in a real business setting, we may want to assign more weightage to a class like 'stolen card' over 'change address'.\
 \
 For tuning hyperparamters, we evaluate the models with 5-fold cross validation based on log loss.
+
 <br/>
 
 ## D. Results and Next Steps
