@@ -88,7 +88,6 @@ I first used the model with zero-shot learning, using just the pre-trained weigh
 \
 Note that prior to training the model, we are required to tokenize the input sentences using the dbert_tokenizer. It generates an input_ids and attention_mask from the training sample, which is then passed to DistilBert for training.\
 <br/>
-
 ### Evaluation
 \
 The final model evaluation is done only based on overall Accuracy scores. Although the classes have a slight imbalance, we are not interested in a macro accuracy or F1-score because the weightage we want to give each class is directly proportional to the number of samples they contain. However, in a real business setting, we may want to assign more weightage to a class like 'stolen card' over 'change address'.\
@@ -98,7 +97,8 @@ For tuning hyperparamters, we evaluate the models with 5-fold cross validation b
 <br/>
 
 ## D. Results and Next Steps
-
+\
+\
 **Results**
 
 |     Model      | Train Accuracy | Test Accuracy |
@@ -122,7 +122,10 @@ We can further interpret our model results by examining the Precision, Recall an
 
 Our model performs well on every class, with no F1-Score below 75%. Only 4 out of the 77 classes have an F1-Score of less than 80%. 'Topping_up_by_card' and 'pending_transfer' are the worst performing classes while 'apple_pay_or_google_pay' and 'top_up_limits' are two of the best performing classes.\
 \
-Further examination of the Precision and Recall scores paint a clearer picture of the model weaknesses. Based on the low Precision, the 'topping_up_by_card' class produces many false positives. This means that the model incorrectly classifies many samples as 'topping_up_by_card' when they actually belong to another class. Similarly, based on the low Recalls, the 'pending_transfer' and 'pending_top_up' suffer from high False Negatives. This indicates that samples belonging to these classes are incorrectly classified by other labels. We could further analyze what these incorrect labels are by studying the confusion matrix, but that is beyond our current scope and would be recommended for next steps.\
-\
+Further examination of the Precision and Recall scores paint a clearer picture of the model weaknesses. Based on the low Precision, the 'topping_up_by_card' class produces many false positives. This means that the model incorrectly classifies many samples as 'topping_up_by_card' when they actually belong to another class. Similarly, based on the low Recalls, the 'pending_transfer' and 'pending_top_up' suffer from high False Negatives. This indicates that samples belonging to these classes are incorrectly classified by other labels. We could further analyze what these incorrect labels are by studying the confusion matrix, but that is beyond our current scope and would be recommended for next steps.
+
+<br/>
+
 **Next Steps**\
+\
 \-
