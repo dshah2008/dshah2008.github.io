@@ -4,7 +4,7 @@
 
 ### Academic Projects
 
-[NLP Topic Classification in Banking (click here to view)](http://example.com/)
+[NLP Topic Classification in Banking (click here to view)](/NLP_Classification.md)
 
 <img src="images/nlp_cover1.PNG?raw=true"/>
 
