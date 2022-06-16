@@ -23,7 +23,7 @@ I'm the sole contributor in this project. It was first implemented by me as part
 \
 The data originates from a real-world banking dataset but has been open-sourced for use in Academia. It was provided by Dr. Stephen Thomas of Queen's University as part of a class project.\
 \
-All data is contained in a single files: public_data.csv.\
+All data is contained in a single file: public_data.csv.\
 \
 \- Training data sample size: 10,466\
 \- Classes: 77\
@@ -108,6 +108,7 @@ The best model is chosen based on Classification Accuracy scores on test data. A
 | LightGBM-SBERT |     0.9731     |    0.8128     |
 |   DistilBERT   |     0.9933     |    0.9174     |
 
+
 As evident from the Test accuracy, the SBERT sentence encodings were a significant improvement on the Tf-Idf vectorizer as features for the LightGBM model. However, both models were comfortably outperformed by DistilBERT. DistilBERT was also the easiest model to implement as no feature engineering and minimal hyperparameter tuning was required. This experiment further validates the power of Transformer models in the NLP domain.
 
 <br/>
@@ -129,7 +130,7 @@ Further examination of the Precision and Recall scores paint a clearer picture o
 
 **Improvements**\
 \
-While we're satisfied with the overall results, there are some improvements we could make if required by the business:\
+While we're satisfied with the overall results, some improvements could be made if required by the business:\
 \
 \- Tune the key hyperparameters of DistilBERT: learning rate, batch_size, epochs, weight_decay.\
 \- Experiment with transfer learning from bigger Transformer models like RoBERTa and XLNet, with partial freezing of layers.\
