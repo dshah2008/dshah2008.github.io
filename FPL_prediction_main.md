@@ -158,7 +158,7 @@ Following is a comparison of actual and predicted values for the LSTM (most rece
 \
 <img src="images/results1.png?raw=true"/>\
 \
-While the predictions do help us project player performance, they are far from robust. Despite improving on the Random Forest, the LSTM model struggles to capture the overall variance in points, especially the outliers. With these results and the overall objective in mind, we propose the following next steps.
+While the predictions do help us project player performance, they are far from robust. Despite improving on the Random Forest, the LSTM model struggles to capture the variance in points, especially the outliers. With these results and the overall objective in mind, we propose the following next steps.
 
 ### Next Steps
 
