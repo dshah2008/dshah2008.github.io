@@ -16,9 +16,9 @@ Classify the water pumps at various locations in Tanzania as one of 3 classes:\
 \- Functional but needs repair\
 \
 **Objective** \
-The main objective is to learn how to tackle a Machine Learning Classification problem with a large number of categorical features. In addition, I'm looking to improve my modeling skills by using sklearn pipelines with custom transformers, as well as using Optuna for hyperparameter tuning. I have also implemented a novel technique for detecting class-based outliers. Following is the link to the competition: [Click here](https://www.drivendata.org/competitions/7/pump-it-up-data-mining-the-water-table/submissions/)\
+The main objective is to learn how to tackle a Machine Learning Classification problem with a large number of categorical features. In addition, I'm looking to improve my modeling skills by using sklearn pipelines with custom transformers, as well as using Optuna for hyperparameter tuning. I have also implemented a novel technique for detecting class-based outliers.\
 \
-This project is based on a practice competition hosted by *DrivenData*, a crowdsourcing platform that helps tackle social issues with the help of the Data Science community. Part of this project was implemented in a team in the Machine Learning course I had taken at Queen's University.\
+This project is based on a practice competition hosted by *DrivenData*, a crowdsourcing platform that helps tackle social issues with the help of the Data Science community. Part of this project was implemented in a team in the Machine Learning course I had taken at Queen's University. Following is the link to the competition: [Click here](https://www.drivendata.org/competitions/7/pump-it-up-data-mining-the-water-table/submissions/)\
 \
 **Business Problem** \
 About 25 million people in Tanzania do not have access to clean drinking water. This has led to a widespread increase in waterborne diseases all across the country and a serious health crisis. As the government struggles to find solutions, our project aims to use predictive analytics to identify the Functional, Non-Functional and Functional-but-needs-repair waterpoints to help them optimally allocate water resources and maintain water pumps.\
