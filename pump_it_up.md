@@ -75,7 +75,7 @@ Further examination of the class-conditional distribution of features helps us i
 <br/>
 
 ## C. Implementation
-
+\
 **Data Cleaning**\
 \- Drop redundant columns that are similar to other features\
 \- Change 0 construction year to NaN as missing values are handled internally by boosting trees\
@@ -112,6 +112,8 @@ The models results were evaluated by DrivenData using classification accuracy. W
 | Random Forest |   0.7942    |    0.7875     |
 |   CatBoost    |   0.8195    |    0.8146     |
 |   LightGBM    |   0.8213    |    0.8170     |
+
+LightGBM demonstrated best performance on test data based on submission results on DrivenData. We further examine its Classification Report and Confusion Matrix.
 
 <br/>
 
