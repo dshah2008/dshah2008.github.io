@@ -82,7 +82,8 @@ Target distribution varies significantly based on Player Position:\
 Target distribution varies significantly based on Team (best and worst team displayed):\
 \
 <img src="images/bps_team_boxplot.JPG?raw=true"/>\
-<br/><br/>
+
+<br/>
 
 ## C. Implementation
 
@@ -150,7 +151,6 @@ Tuning: The model is tuned with the help of Optuna's Random Sampler and Median P
 |     LSTM      |  0.0115   |  0.0859   |  0.0108  |  0.0817  |
 
 <br/>
-
 While the Random Forest has a lower Training error, it does overfit. On the unseen Test data, the LSTM model performs significantly better based on both Mean Squared Error and Mean Absolute Error.\
 \
 Following is a comparison of actual and predicted values for the LSTM (most recent gameweek for 50 players).\
