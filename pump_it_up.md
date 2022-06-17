@@ -120,6 +120,7 @@ LightGBM demonstrated best performance on test data based on submission results 
 \
 <img src="images/accuracy_report1.PNG?raw=true"/>
 \
+\
 **Confusion Matrix**\
 \
 <img src="images/CM.png?raw=true"/>
@@ -131,6 +132,7 @@ The Recall of the Non-Functional class is also not so high. This indicates high 
 On the other hand, the Functional class has very high Recall. It has fewer False Negatives than False Positives, which means that very few Functional pumps are being predicted as Non-Functional.\
 \
 If we were to prioritize the business objective over the competition scores, we would focus on improving the Non-Functional Recall and Functional Precision. This is because predicting Non-Functional pumps as Functional is very costly in terms of health hazards. This is explained in the Business Impact section.\
+\
 \
 **Business Impact**\
 \
