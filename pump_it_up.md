@@ -113,10 +113,9 @@ The models results were evaluated by DrivenData using classification accuracy. W
 |   CatBoost    |   0.8195    |    0.8146     |
 |   LightGBM    |   0.8213    |    0.8170     |
 
-LightGBM demonstrated best performance on test data based on submission results on DrivenData. We further examine its Classification Report and Confusion Matrix.
-
-<br/>
-
+LightGBM demonstrated best performance on test data based on submission results on DrivenData. We further examine its Classification Report and Confusion Matrix.\
+\
+\
 **Classification Report**\
 \
 <img src="images/accuracy_report1.PNG?raw=true"/>
