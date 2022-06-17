@@ -160,12 +160,12 @@ Following is a comparison of actual and predicted values for the LSTM (most rece
 \
 <img src="images/results1.png?raw=true"/>
 \
-While the predictions do help us project player performance, they are far from robust. Despite improving on the Random Forest, the LSTM model struggles to capture the overall variance in points, especially the outliers. With these results in mind, we propose the following next steps.
+While the predictions do help us project player performance, they are far from robust. Despite improving on the Random Forest, the LSTM model struggles to capture the overall variance in points, especially the outliers. With these results and the overall objective in mind, we propose the following next steps.
 
 ### Next Steps
 
-\- Forecast next 5 timesteps for each player instead of the single average prediction\
 \- Additional data and features: Opponent history, team formations, player position breakdown, injury news\
+\- Forecast next 5 timesteps for each player instead of the single average prediction\
 \- Improve encoding: use rolling average of points to encode *team* and *opponent* instead of just previous season totals\
 \- Remove data filters\
 \- Experiment with more Seq2Seq models: LSTM with Attention head, Transformers, Neural Prophet
