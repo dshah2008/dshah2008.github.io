@@ -104,7 +104,7 @@ The models results were evaluated by DrivenData using classification accuracy. W
 <br/>
 
 ## D. Results & Business Impact
-
+\
 **Results**
 
 |     Model     | CV Accuracy | Test Accuracy |
@@ -120,7 +120,7 @@ LightGBM demonstrated best performance on test data based on submission results 
 **Classification Report**\
 \
 <img src="images/accuracy_report1.PNG?raw=true"/>
-
+\
 **Confusion Matrix**\
 \
 <img src="images/CM.png?raw=true"/>
