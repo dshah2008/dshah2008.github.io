@@ -25,7 +25,7 @@ About 25 million people in Tanzania do not have access to clean drinking water. 
 \
 **Contributions** \
 Besides part of the data exploration, all the code displayed in this repository has been developed only by me. The original team project involved additional implementation:\
-\- Jacqueline Haniff: Data Exploration\
+\- Ting Lan: Data Exploration\
 \- Kevin Wang, Ajay Chaudhary: Model Experimentation\
 The additional modeling code has not been included in the repository, but the results are displayed in this report.
 
