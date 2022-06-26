@@ -30,7 +30,7 @@ While there are many existing solutions to this problem, the common approaches o
 \
 **Contributions** \
 Ting Lan, Ajay Chaudhary - Data Gathering and Preparation\
-Dhrumel Shah - Modeling
+Dhrumel Shah - Model Experimentation and Results
 
 <br/>
 
